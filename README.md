@@ -8,7 +8,7 @@ In the past six months, I've built many LLM applications. In conclusion, I want 
 
 From my experience, when it comes to RAG, I couldn't get the expected responses unless I used OpenAI's GPT-4o or GPT-4o-mini. A larger LLM is necessary, rather than a compact one.
 
-For most cases, unless you're dealing with service providers or large enterprises, processing data within 10,000 records is sufficient for RAG. SQLite is enough for the database.
+For most cases, unless you're dealing with service providers or large enterprises, processing data within 10,000 records is sufficient for RAG. [SQLite](https://www.sqlite.org/) is enough for the database.
 
 Even in RAG, complex academic processing isn't needed. What's important is the data model and the prompts you input into the RAG.
 
