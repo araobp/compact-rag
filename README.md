@@ -1,0 +1,2 @@
+# compact-rag
+ Compact RAG
