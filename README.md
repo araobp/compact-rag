@@ -14,7 +14,7 @@ Even in RAG, complex academic processing isn't needed. What's important is the d
 
 There's no need for LangChain. It's smoother to directly work with APIs like those provided by OpenAI. Development, debugging, and code maintenance are easier this way.
 
-A vector DB with complex dependencies like ChromaDB isn't necessary. A simple database that can perform similarity search is sufficient. I tried sqlite-vec, and for the use cases I typically handle, sqlite-vec provided enough performance.
+A vector DB with complex dependencies like ChromaDB isn't necessary. A simple database that can perform similarity search is sufficient. I tried [sqlite-vec](https://github.com/asg017/sqlite-vec), and for the use cases I typically handle, sqlite-vec provided enough performance.
 
 ## Goal of this project
 
