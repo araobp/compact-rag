@@ -18,7 +18,7 @@ Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
 
 This RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
 
-## Compiling sqlite-vec for Rapsberry Pi
+## Compiling sqlite-vec on Rapsberry Pi
 
 ```
 $ git clone https://github.com/asg017/sqlite-vec
