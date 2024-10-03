@@ -21,3 +21,5 @@ A vector DB with complex dependencies like ChromaDB isn't necessary. A simple da
 Develop a compact RAG that can run on my Raspberry Pi 3.
 
 This RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
+
+
