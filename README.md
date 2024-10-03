@@ -31,5 +31,7 @@ $ sudo apt-get install libsqlite3-dev
 $ make all
 ```
 
+Find "vec0.so" in ./dist directory.
+
 ## Test script
 
