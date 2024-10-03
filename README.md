@@ -18,6 +18,26 @@ Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
 
 This RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
 
+## Architecture
+
+```
+           Brain
+    [OpenAI API service]
+             |
+             |
+        Compact RAG
+       [RaspberryPi]---+---USB---[Camera]
+                       |
+                       +---USB---[Speaker]
+                       |
+                       +---USB---[Mic]
+                       |
+                       +---USB---[Keyboard/Mouse]
+                       |
+                       +---USB Serial---[Other sensors/actuators]
+
+```
+
 ## Compiling sqlite-vec on Rapsberry Pi
 
 ```
