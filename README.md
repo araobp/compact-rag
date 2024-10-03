@@ -31,7 +31,7 @@ Find "vec0.so" in ./dist directory.
 
 ## Test script
 
-### test_vector_db.py
+### [test_vector_db.py](./test/test_vector_db.py)
 
 ```
 xxxx@raspberrypi:~/compact-rag/misc $ python test.py 
