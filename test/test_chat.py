@@ -1,4 +1,4 @@
-# VectorDB test program
+# Chat test program
 # Date: 2024/10/04
 # Author: araobp@github.com
 
