@@ -54,13 +54,13 @@ Find "vec0.so" in ./dist directory.
 
 ### [test_vector_db.py](./test/test_vector_db.py)
 
-## References
-
-- [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
-- [Bach Network](https://github.com/araobp/bach-network)
-
 ```
 xxxx@raspberrypi:~/compact-rag/test $ python test.py 
 how are you?
 [(1, 0.0), (0, 0.9725450277328491), (2, 1.0223934650421143)]
 ```
+
+## References
+
+- [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
+- [Bach Network](https://github.com/araobp/bach-network)
