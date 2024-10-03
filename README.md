@@ -14,11 +14,32 @@ And a simple database that can perform similarity search is sufficient. I tried 
 
 ## Goal of this project
 
-Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
+- Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
+- Work with various devices via RaspberryPi (and possibly, via a MCU).
+- The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
+- The RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
 
-This RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
+## Architecture
 
-## Compiling sqlite-vec for Rapsberry Pi
+```
+           Brain
+    [OpenAI API service]
+             |
+             |
+        Compact RAG
+       [RaspberryPi]---+---USB---[Camera]
+             |         |
+         SQLite DB     +---USB---[Speaker]
+                       |
+                       +---USB---[Mic]
+                       |
+                       +---USB---[Keyboard/Mouse]
+                       |
+                       +---USB Serial---[Other sensors/actuators]
+
+```
+
+## Compiling sqlite-vec on Rapsberry Pi
 
 ```
 $ git clone https://github.com/asg017/sqlite-vec
@@ -31,10 +52,15 @@ Find "vec0.so" in ./dist directory.
 
 ## Test script
 
-### test_vector_db.py
+### [test_vector_db.py](./test/test_vector_db.py)
 
 ```
-xxxx@raspberrypi:~/compact-rag/misc $ python test.py 
+xxxx@raspberrypi:~/compact-rag/test $ python test.py 
 how are you?
 [(1, 0.0), (0, 0.9725450277328491), (2, 1.0223934650421143)]
 ```
+
+## References
+
+- [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
+- [Bach Network](https://github.com/araobp/bach-network)
