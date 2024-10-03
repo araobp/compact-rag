@@ -1,7 +1,7 @@
 import struct
 from typing import List
 
-LIB_PATH = "../lib_armv7a"
+LIB_PATH = "../lib"
 
 #---- Reference: sqlite_vec __init__.py 
 
