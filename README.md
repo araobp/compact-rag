@@ -27,8 +27,8 @@ This RAG will also work as an API server for my other project: https://github.co
              |
         Compact RAG
        [RaspberryPi]---+---USB---[Camera]
-                       |
-                       +---USB---[Speaker]
+             |         |
+         SQLite DB     +---USB---[Speaker]
                        |
                        +---USB---[Mic]
                        |
