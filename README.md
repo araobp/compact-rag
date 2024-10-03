@@ -14,9 +14,10 @@ And a simple database that can perform similarity search is sufficient. I tried 
 
 ## Goal of this project
 
-Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
-
-This RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
+- Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
+- Work with various devices via RaspberryPi (and possibly, via a MCU).
+- The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
+- The RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
 
 ## Architecture
 
@@ -52,6 +53,11 @@ Find "vec0.so" in ./dist directory.
 ## Test script
 
 ### [test_vector_db.py](./test/test_vector_db.py)
+
+## References
+
+- [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
+- [Bach Network](https://github.com/araobp/bach-network)
 
 ```
 xxxx@raspberrypi:~/compact-rag/test $ python test.py 
