@@ -1,7 +1,7 @@
 import struct
 from typing import List
 
-LIB_PATH = "../lib_raspi"
+#LIB_PATH = "../lib_raspi"
 
 #---- Reference: sqlite_vec __init__.py 
 
@@ -14,8 +14,8 @@ __version_info__ = tuple(__version__.split("."))
 def loadable_path():
     """ Returns the full path to the sqlite-vec loadable SQLite extension bundled with this package """
 
-    #loadable_path = path.join(path.dirname(__file__), "vec0")
-    loadable_path = path.join(LIB_PATH, "vec0") 
+    loadable_path = path.join(path.dirname(__file__), "vec0")
+    #loadable_path = path.join(LIB_PATH, "vec0") 
     return path.normpath(loadable_path)
 
 def load(conn: sqlite3.Connection)  -> None:
