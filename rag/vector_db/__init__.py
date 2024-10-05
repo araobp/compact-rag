@@ -46,20 +46,3 @@ class VectorDB:
         ).fetchall()
         return rows
 
-
-if __name__ == "__main__":
-    EMBEDDINGS_DB_PATH = "./test.db"
-
-    items = [
-        (1, [0.1, 0.1, 0.1, 0.1, 0.1, 0.1]),
-        (2, [0.2, 0.2, 0.2, 0.2, 0.2, 0.2]),
-        (3, [0.3, 0.3, 0.3, 0.3, 0.3, -0.3]),
-        (4, [0.4, 0.4, 0.4, 0.4, 0.4, 0.4]),
-        (5, [0.5, 0.5, 0.5, 0.5, 0.5, -0.5]),
-    ]
-    query = [0.3, 0.3, 0.3, 0.3, 0.3, -0.3]
-
-    vectorDB = VectorDB(EMBEDDINGS_DB_PATH, "test", 6)
-    vectorDB.delete_all()
-    vectorDB.save(items)
-    print(vectorDB.search(query))
