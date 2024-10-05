@@ -50,26 +50,9 @@ $ make all
 
 Find "vec0.so" in ./dist directory.
 
-## Test script
+## Unit test
 
-### [test_vector_db.py](./test/test_vector_db.py)
-
-```
-xxxx@raspberrypi:~/compact-rag/test $ python test.py 
-how are you?
-[(1, 0.0), (0, 0.9725450277328491), (2, 1.0223934650421143)]
-```
-
-### [test_chat.py](./test/test_chat.py)
-
-```
-xxxx@raspberrypi:~/compact-rag/test $ python test_chat.py 
-Einstein's theory of relativity comprises two parts: special relativity and general relativity. Special relativity posits that the laws of physics are the same for all observers, leading to the famous equation E=mc², linking mass and energy. General relativity describes gravity as the curvature of spacetime caused by mass.
---- Streaming ---
-Einstein's theory of relativity consists of two parts: special relativity and general relativity. Special relativity, introduced in 1905, focuses on the physics of objects moving at constant speeds, particularly those close to the speed of light. It introduces the concepts of time dilation (time passes slower for fast-moving objects) and length contraction (objects appear shorter in the direction of motion). The famous equation \(E=mc^2\) illustrates the equivalence of mass and energy.
-
-General relativity, published in 1915, expands this framework to include gravity, describing it as the curvature of spacetime caused by mass. Massive objects like planets and stars warp the spacetime around them, causing other objects to follow curved paths, which we perceive as gravitational attraction. Together, these theories revolutionized our understanding of space, time, and gravity.
-```
+=> [unittest](./unittest)
 
 ## References
 
