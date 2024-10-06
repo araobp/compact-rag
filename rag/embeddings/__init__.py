@@ -14,7 +14,7 @@ client = OpenAI()
 def get_embedding(text, model=EMBEDDING_MODEL):
     if type(text) == str: 
         return client.embeddings.create(input = [text], model=model).data[0].embedding
-    elif type(text) == list:
+    elif type(text) == list or type(text) == tuple:
         result = client.embeddings.create(input = text, model=model)
         return [e.embedding for e in result.data] 
     else:
