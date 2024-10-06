@@ -48,12 +48,12 @@ $ make all
 
 Find "vec0.so" in ./dist directory.
 
-## Reference documents and chunk generation
+## Reference documents and chunk generation for RAG
 
 - [Reference Documents](./ref/virtual_showroom)
 - [Chunks.ipynb](./ref/Chunks.ipynb)
 
-## API server based on Flask
+## RAG as an API server based on Flask
 
 ...
 
