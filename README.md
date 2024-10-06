@@ -55,6 +55,10 @@ Find "vec0.so" in ./dist directory.
 - [Reference Documents](./ref/virtual_showroom)
 - [Chunks.ipynb](./ref/Chunks.ipynb)
 
+## API server based on Flask
+
+...
+
 ## Unit test
 
 - [rag](./unittest/rag)
