@@ -52,11 +52,12 @@ Find "vec0.so" in ./dist directory.
 
 ## Reference documents and chunk generation
 
-=> [Chunks.ipynb](./ref/Chunks.ipynb)
+- [Reference Documents](./ref/virtual_showroom)
+- [Chunks.ipynb](./ref/Chunks.ipynb)
 
 ## Unit test
 
-=> [unittest](./unittest)
+- [rag](./unittest/rag)
 
 ## References
 
