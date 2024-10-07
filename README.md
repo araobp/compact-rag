@@ -63,7 +63,7 @@ Find "vec0.so" in ./dist directory.
 
 Still a very simple implementation, but it really works on Raspberry Pi.
 
-<img src="docs/api_server.jpg" width=300>
+<img src="docs/api_server.jpg" width=600>
 
 - [api.py](./api/api.py)
 
