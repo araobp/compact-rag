@@ -48,9 +48,9 @@ $ make all
 
 Find "vec0.so" in ./dist directory.
 
-## Reference documents and chunk generation for RAG
+## Reference documents, chunking and embeddings for RAG
 
-=> [Reference Documents](./ref/README.md)
+=> [Reference documents, chunking and embeddings for RAG](./ref/README.md)
 
 ## RAG as an API server based on Flask
 
