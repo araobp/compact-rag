@@ -5,6 +5,8 @@
 import sys
 sys.path.append("../../rag")
 
+from urllib import parse
+
 import requests 
 import unittest
 
@@ -23,13 +25,23 @@ class TestChat(unittest.TestCase):
     def test_search(self):
         k = 3
 
-        r = requests.get(f"{BASE_URL}/search?query=Hamburg&context=hansaplatz")
+        urlparams = parse.urlencode({"query": "Hamburg", "context": "hansaplatz"})
+        r = requests.get(f"{BASE_URL}/search?{urlparams}")
         r = r.json()
         print(r)
 
         self.assertEqual(len(r['ids']), k)
         self.assertEqual(len(r['distances']), k)
         self.assertEqual(len(r['chunks']), k)
+
+    def test_chat(self):
+        k = 3
+
+        urlparams = parse.urlencode({"query": "Hamburg", "context": "hansaplatz",
+            "user_message": "Where is Hansaplatz?"})
+        r = requests.get(f"{BASE_URL}/chat?{urlparams}")
+        r = r.json() 
+        print(r)
 
 if __name__ == "__main__":
     unittest.main()
