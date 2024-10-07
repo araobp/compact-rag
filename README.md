@@ -61,7 +61,9 @@ Find "vec0.so" in ./dist directory.
 
 ## RAG as an API server based on Flask
 
-...
+Still a very simple implementation, but it really works on Raspberry Pi.
+
+- [api.py](./api/api.py)
 
 ## Unit test
 
