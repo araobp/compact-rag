@@ -50,7 +50,14 @@ Find "vec0.so" in ./dist directory.
 
 ## Reference documents, chunking and embeddings for RAG
 
-=> [Reference documents, chunking and embeddings for RAG](./ref/README.md)
+### Document sources
+
+- [Virtual Showroom](./ref/virtual_showroom)
+
+### Chunking and Embeddings
+
+- [Step 1. Generating Chunks](./ref/Chunks.ipynb): I run this notebook on my Mac.
+- [Step 2. Calculating embeddings](./ref/calc_embeddings.py): I run this script on my Raspberry Pi 3.
 
 ## RAG as an API server based on Flask
 
