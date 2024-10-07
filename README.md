@@ -60,6 +60,7 @@ Find "vec0.so" in ./dist directory.
 ## Unit test
 
 - [rag](./unittest/rag)
+- [api](./unittest/api)
 
 ## References
 
