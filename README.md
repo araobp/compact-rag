@@ -12,6 +12,8 @@ And a simple database that can perform similarity search is sufficient. I tried 
 
 ## Goal of this project
 
+<img src="./docs/my_raspberry_pi.jpg" width=400>
+
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
 - Work with various devices via RaspberryPi (and possibly, via a MCU).
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
