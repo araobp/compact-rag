@@ -6,5 +6,5 @@
 
 ## Chunking and Embeddings
 
-- [Generating Chunks](Chunks.ipynb): I run this notebook on my Mac.
-- [Calculating embeddings](calc_embeddings.py): I run this script on my Raspberry Pi 3.
+- [Step 1. Generating Chunks](Chunks.ipynb): I run this notebook on my Mac.
+- [Step 2. Calculating embeddings](calc_embeddings.py): I run this script on my Raspberry Pi 3.
