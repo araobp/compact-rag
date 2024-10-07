@@ -12,6 +12,8 @@ And a simple database that can perform similarity search is sufficient. I tried 
 
 ## Goal of this project
 
+<img src="./docs/my_raspberry_pi.jpg" width=400>
+
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
 - Work with various devices via RaspberryPi (and possibly, via a MCU).
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
@@ -62,6 +64,8 @@ Find "vec0.so" in ./dist directory.
 ## RAG as an API server based on Flask
 
 Still a very simple implementation, but it really works on Raspberry Pi.
+
+<img src="docs/api_server.jpg" width=700>
 
 - [api.py](./api/api.py)
 
