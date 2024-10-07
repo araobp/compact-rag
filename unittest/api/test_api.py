@@ -12,6 +12,8 @@ import unittest
 
 BASE_URL = "http://localhost:5050"
 
+IMG_PATH = "./image/0_iso-republic-cat-bathing.jpg"
+
 class TestChat(unittest.TestCase):
     """Test the APIs
     """
@@ -42,6 +44,11 @@ class TestChat(unittest.TestCase):
         r = requests.get(f"{BASE_URL}/chat?{urlparams}")
         r = r.json() 
         print(r)
+
+    def test_chat_with_image(self):
+        k = 3
+
+
 
 if __name__ == "__main__":
     unittest.main()
