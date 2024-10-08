@@ -1,3 +1,8 @@
+# embddings
+#
+# Author: araobp@github.com
+# Date: 2024/10/08
+
 from openai import OpenAI
 
 EMBEDDING_MODEL = "text-embedding-3-small"

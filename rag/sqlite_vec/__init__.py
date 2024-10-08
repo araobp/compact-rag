@@ -1,3 +1,5 @@
+# Note: this is a copy of the original __init__.py in the sqlite_vec python package
+
 from os import path
 import sqlite3
 

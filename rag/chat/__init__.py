@@ -1,8 +1,13 @@
+# chat
+#
+# Author: araobp@github.com
+# Date: 2024/10/08
+
 from openai import OpenAI
 
 client = OpenAI()
 
-def chat(system_message, user_message, b64image=None, callback=None):
+def chat(assistant_message, system_message, user_message, b64image=None, callback=None):
 
     content_user = [
                 {
@@ -15,7 +20,10 @@ def chat(system_message, user_message, b64image=None, callback=None):
                 },
                ] if b64image is not None else user_message 
 
-    messages = [{"role": "user", "content": content_user}]
+    messages = [
+            {"role": "assistant", "content": assistant_message},
+            {"role": "user", "content": content_user}
+            ]
     
     if system_message:
         messages.append({"role": "system", "content": system_message})

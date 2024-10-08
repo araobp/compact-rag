@@ -1,5 +1,10 @@
+# vector_db
+#
 # This script is based on
 # https://github.com/asg017/sqlite-vec/blob/main/examples/simple-python/demo.py
+#
+# Author: araobp@github.com
+# Date: 2024/10/08
 
 import struct
 from typing import List

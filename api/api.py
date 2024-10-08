@@ -8,10 +8,13 @@ import embeddings
 import vector_db
 import chat
 
+SAVE_IMAGE = False
+
 DB_PATH = "../db/documents.db"
 VECTOR_DB_PATH = "../db/embeddings.db"
 
-SYSTEM_MESSAGE = "You are an AI assistant. You are also trained to interpret images."
+ASSISTANT_MESSAGE = "You are an AI assistant."
+SYSTEM_MESSAGE = "You are good at analyzing images."
 
 app = Flask(__name__)
 
@@ -69,8 +72,9 @@ def chat_():
     if request.method == "PUT":
         data = request.json
         b64image = data["b64image"]
-        with open("./tmp/b64image.txt", "w") as f:
-            f.write(b64image)
+        if SAVE_IMAGE:
+            with open("./tmp/b64image.txt", "w") as f:
+                f.write(b64image)
     else:
         b64image = None
 
@@ -89,7 +93,12 @@ def chat_():
 {chunks}
 '''
 
-    response = chat.chat(system_message=system_message, user_message=prompt, b64image=b64image)
+    response = chat.chat(
+            assistant_message=ASSISTANT_MESSAGE,
+            system_message=system_message,
+            user_message=prompt,
+            b64image=b64image
+            )
 
     return(jsonify({"response": response}))
     
