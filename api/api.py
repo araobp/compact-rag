@@ -1,20 +1,27 @@
 import sys
 sys.path.append("../rag")
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 import sqlite3
 
 import embeddings
-import vector_db
 import chat
+import tts
+import vector_db
 
 SAVE_IMAGE = False
+SAVE_AUDIO = False
 
 DB_PATH = "../db/documents.db"
 VECTOR_DB_PATH = "../db/embeddings.db"
 
 ASSISTANT_MESSAGE = "You are an AI assistant."
 SYSTEM_MESSAGE = "You are good at analyzing images."
+
+# OpenAI's Text-to-Speech
+tts_alloy = tts.TTS(voice="alloy", format="mp3")
+tts_nova = tts.TTS(voice="nova", format="mp3")
+voices = {"alloy": tts_alloy, "nova": tts_nova}
 
 app = Flask(__name__)
 
@@ -53,7 +60,7 @@ def hello_world():
     return jsonify({"message": "Hello, World!"})
 
 
-@app.route("/search")
+@app.route("/search", methods=["GET"])
 def search():
     user_message = request.args.get("user_message", default=None, type=str)
     context = request.args.get("context", default=None, type=str)
@@ -102,6 +109,24 @@ def chat_():
 
     return(jsonify({"response": response}))
     
+
+@app.route("/tts", methods=["GET"])
+def text_to_speech():
+    voice = request.args.get("voice", default="alloy", type=str)
+    text = request.args.get("text", default="hello", type=str)
+
+    speech = voices[voice].speak(text)
+    if SAVE_AUDIO:
+        with open("tmp/tts.mp3", "wb") as f:
+            f.write(speech)
+
+    response = make_response()
+    response.data = speech
+
+    response.headers["Content-Disposition"] = "attachment; filename=tts.mp3"
+    response.mimetype = "audio/mpeg"
+
+    return response
 
 
 if __name__ == ('__main__'):

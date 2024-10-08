@@ -47,11 +47,13 @@ class TestChat(unittest.TestCase):
 
         urlparams = parse.urlencode({
             "context": "hansaplatz",
-            "user_message": "Where is Hansaplatz?"
+            "user_message": "Where is Hansaplatz?",
+            "k": k
             })
         r = requests.get(f"{BASE_URL}/chat?{urlparams}")
-        r = r.json() 
-        print(r)
+        print(r.json())
+        self.assertEqual(r.status_code, 200)
+
 
     def test_chat_with_image(self):
         k = 3
@@ -61,11 +63,25 @@ class TestChat(unittest.TestCase):
 
         urlparams = parse.urlencode({
             "context": "yokohama",
-            "user_message": "What can you see in the attached image?"
+            "user_message": "What can you see in the attached image?",
+            "k": k
             })
         r = requests.put(f"{BASE_URL}/chat?{urlparams}", json={"b64image": b64image})
-        r = r.json()
-        print(r)
+        print(r.json())
+        self.assertEqual(r.status_code, 200)
+
+
+    def test_tts(self):
+        urlparams = parse.urlencode({
+            "voice": "alloy",
+            "text": "I am going to develop AI Agents."
+            })
+        r = requests.get(f"{BASE_URL}/tts?{urlparams}")
+        speech = r.content
+        with open("./tmp/speech.mp3", "wb") as f:
+            f.write(speech)
+        self.assertEqual(r.status_code, 200)
+
 
 if __name__ == "__main__":
     unittest.main()
