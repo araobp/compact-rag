@@ -50,19 +50,27 @@ def hello_world():
 
 @app.route("/search")
 def search():
-    text = request.args.get("query", default=None, type=str)
+    user_message = request.args.get("user_message", default=None, type=str)
     context = request.args.get("context", default=None, type=str)
     k = request.args.get("k", default=3, type=int)
 
-    return(jsonify(_search(text, context, k)))
+    return(jsonify(_search(user_message, context, k)))
 
 
-@app.route("/chat")
+@app.route("/chat", methods=["GET", "PUT"])
 def chat_():
     system_message = request.args.get("system_message", default=None, type=str)
     user_message = request.args.get("user_message", default="", type=str)
     context = request.args.get("context", default=None, type=str)
     k = request.args.get("k", default=3, type=int)
+
+    if request.method == "PUT":
+        data = request.json
+        b64image = data["b64image"]
+        with open("./tmp/b64image.txt", "w") as f:
+            f.write(b64image)
+    else:
+        b64image = None
 
     system_message = '' if system_message is None else '\n\n' + system_message
     result = _search(user_message, context, k)
@@ -80,7 +88,7 @@ def chat_():
 {chunks}
 '''
 
-    response = chat.chat(prompt)
+    response = chat.chat(prompt, b64image)
 
     return(jsonify({"response": response}))
     
