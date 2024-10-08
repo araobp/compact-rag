@@ -96,3 +96,4 @@ Find "vec0.so" in ./dist directory.
 
 - [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
 - [Bach Network](https://github.com/araobp/bach-network)
+- [OpenAI Realtime API](https://hunch.tools/blog/open-ai-realtime-api-in-python/)
