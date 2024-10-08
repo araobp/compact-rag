@@ -2,23 +2,28 @@ from openai import OpenAI
 
 client = OpenAI()
 
-IMG_TYPE = "jpeg"
+def chat(system_message, user_message, b64image=None, callback=None):
 
-def chat(text, b64image=None, callback=None):
-
-    def _content(text, b64image=None):
-        return [
-                {"type": "text", "text": text},
+    content_user = [
+                {
+                    "type": "text",
+                    "text": user_message 
+                },
                 {
                     "type": "image_url",
-                    "image_url": {"url": f"data:{IMG_TYPE};base64,{b64image}"},
+                    "image_url": {"url": f"data:image/jpeg;base64,{b64image}"},
                 },
-               ] if b64image is not None else text 
+               ] if b64image is not None else user_message 
+
+    messages = [{"role": "user", "content": content_user}]
+    
+    if system_message:
+        messages.append({"role": "system", "content": system_message})
 
     if callback:
         stream = client.chat.completions.create(
             model="gpt-4o-mini",
-            messages=[{"role": "user", "content": _content(text, b64image)}],
+            messages=messages,
             stream=True,
         )
 
@@ -32,7 +37,7 @@ def chat(text, b64image=None, callback=None):
     else:
         resp = client.chat.completions.create(
             model="gpt-4o-mini",
-            messages=[{"role": "user", "content": _content(text, b64image)}]
+            messages=messages,
         )
 
         return resp.choices[0].message.content

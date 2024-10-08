@@ -11,6 +11,8 @@ import chat
 DB_PATH = "../db/documents.db"
 VECTOR_DB_PATH = "../db/embeddings.db"
 
+SYSTEM_MESSAGE = "You are an AI assistant. You are also trained to interpret images."
+
 app = Flask(__name__)
 
 
@@ -59,8 +61,8 @@ def search():
 
 @app.route("/chat", methods=["GET", "PUT"])
 def chat_():
-    system_message = request.args.get("system_message", default=None, type=str)
-    user_message = request.args.get("user_message", default="", type=str)
+    system_message = request.args.get("system_message", default=SYSTEM_MESSAGE, type=str)
+    user_message = request.args.get("user_message", default=None, type=str)
     context = request.args.get("context", default=None, type=str)
     k = request.args.get("k", default=3, type=int)
 
@@ -72,12 +74,11 @@ def chat_():
     else:
         b64image = None
 
-    system_message = '' if system_message is None else '\n\n' + system_message
     result = _search(user_message, context, k)
 
     chunks = '\n\n'.join(result['chunks'])
 
-    prompt = f'''You are an AI assistant. Please refer to the attached document and respond to the following instructions.{system_message}
+    prompt = f'''Please refer to the attached document and respond to the following instructions.
 
 ## Question
 
@@ -88,7 +89,7 @@ def chat_():
 {chunks}
 '''
 
-    response = chat.chat(prompt, b64image)
+    response = chat.chat(system_message=system_message, user_message=prompt, b64image=b64image)
 
     return(jsonify({"response": response}))
     

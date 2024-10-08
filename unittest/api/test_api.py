@@ -15,6 +15,7 @@ BASE_URL = "http://localhost:5050"
 
 IMG_PATH1 = "./image/0_iso-republic-cat-bathing.jpg"
 IMG_PATH2 = "./image/IMG_0230_level.jpg"
+IMG_PATH3 = "./image/IMG_0230_level_cropped.jpg"
 
 class TestChat(unittest.TestCase):
     """Test the APIs
@@ -55,12 +56,12 @@ class TestChat(unittest.TestCase):
     def test_chat_with_image(self):
         k = 3
 
-        with open(IMG_PATH2, 'rb') as f:
-            b64image = base64.b64encode(f.read())
+        with open(IMG_PATH3, 'rb') as f:
+            b64image = base64.b64encode(f.read()).decode('utf-8')
 
         urlparams = parse.urlencode({
             "context": "yokohama",
-            "user_message": "What are the histric buildings in the left hand in the image?"
+            "user_message": "What can you see in the attached image?"
             })
         r = requests.put(f"{BASE_URL}/chat?{urlparams}", json={"b64image": b64image})
         r = r.json()
