@@ -65,13 +65,15 @@ Find "vec0.so" in ./dist directory.
 
 <img src="docs/api_server.jpg" width=700>
 
-=> [Compact RAG modules](./rag)
-=> [API server](./api/api.py)
+### Implementations
 
-## Unit tests
+- [Compact RAG modules](./rag)
+- [API server](./api/api.py)
 
-- [rag](./unittest/rag)
-- [api](./unittest/api)
+### Unit tests
+
+- [Unit tests for compact RAG modules](./unittest/rag)
+- [Unit test for the API server](./unittest/api)
 
 ## References
 
