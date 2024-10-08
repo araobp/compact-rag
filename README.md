@@ -1,6 +1,6 @@
 # Compact RAG
 
-(Work in progress)
+Very compact RAG that runs on Raspberry Pi.
 
 ## Background
 
