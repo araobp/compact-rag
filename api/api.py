@@ -85,9 +85,9 @@ def chat_():
     else:
         b64image = None
 
-    result = _search(user_message, context, k)
+    result = _search(user_message, context, k) if context is not None else None
 
-    chunks = '\n\n'.join(result['chunks'])
+    chunks = '\n\n'.join(result['chunks']) if context is not None else None
 
     prompt = f'''Please refer to the attached document and respond to the following instructions.
 
@@ -98,7 +98,7 @@ def chat_():
 ## Attached document
 
 {chunks}
-'''
+''' if context is not None else user_message
 
     response = chat.chat(
             assistant_message=ASSISTANT_MESSAGE,
@@ -107,7 +107,7 @@ def chat_():
             b64image=b64image
             )
 
-    return(jsonify({"response": response}))
+    return(jsonify({"answer": response}))
     
 
 @app.route("/tts", methods=["GET"])
