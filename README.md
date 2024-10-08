@@ -2,6 +2,8 @@
 
 Very compact RAG that runs on Raspberry Pi.
 
+<img src="./docs/my_raspberry_pi.jpg" width=400>
+
 ## Background
 
 In the past six months, I've built many LLM applications. In conclusion, I want a compact RAG rather than a compact LLM.
@@ -13,8 +15,6 @@ And a simple database that can perform similarity search is sufficient. I tried 
 It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects including [virtual-showroom](https://github.com/araobp/virtual-showroom).
 
 ## Goal of this project
-
-<img src="./docs/my_raspberry_pi.jpg" width=400>
 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
 - Work with various devices via RaspberryPi (and possibly, via a MCU).
