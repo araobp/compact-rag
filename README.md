@@ -10,6 +10,8 @@ For most cases, unless you're dealing with service providers or large enterprise
 
 And a simple database that can perform similarity search is sufficient. I tried [sqlite-vec](https://github.com/asg017/sqlite-vec), and for the use cases I typically handle, sqlite-vec provided enough performance.
 
+It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects including [virtual-showroom](https://github.com/araobp/virtual-showroom).
+
 ## Goal of this project
 
 <img src="./docs/my_raspberry_pi.jpg" width=400>
