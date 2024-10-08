@@ -1,5 +1,7 @@
 # Compact RAG
 
+(Work in progress)
+
 Very compact RAG that runs on Raspberry Pi.
 
 <img src="./docs/my_raspberry_pi.jpg" width=400>
