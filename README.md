@@ -19,6 +19,13 @@ And a simple database that can perform similarity search is sufficient. I tried 
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
 - The RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
 
+### Running the API server for "virtual-showroom"
+
+```
+$ cd api
+$ python app.py
+```
+
 ## Architecture
 
 ```
