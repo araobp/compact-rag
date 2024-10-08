@@ -66,7 +66,22 @@ class TestChat(unittest.TestCase):
             "user_message": "What can you see in the attached image?",
             "k": k
             })
-        r = requests.put(f"{BASE_URL}/chat?{urlparams}", json={"b64image": b64image})
+        r = requests.put(f"{BASE_URL}/chat?{urlparams}",
+                json={"b64image": b64image})
+        print(r.json())
+        self.assertEqual(r.status_code, 200)
+
+
+    def test_chat_with_image_without_context(self):
+        
+        with open(IMG_PATH1, 'rb') as f:
+            b64image = base64.b64encode(f.read()).decode('utf-8')
+
+        urlparams = parse.urlencode({
+            "user_message": "What can you see in the attached image?",
+            })
+        r = requests.put(f"{BASE_URL}/chat?{urlparams}",
+            json={"b64image": b64image})
         print(r.json())
         self.assertEqual(r.status_code, 200)
 
