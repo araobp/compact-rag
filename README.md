@@ -61,18 +61,19 @@ Find "vec0.so" in ./dist directory.
 - [Step 1. Generating Chunks](./ref/Chunks.ipynb): I run this notebook on my Mac.
 - [Step 2. Calculating embeddings](./ref/calc_embeddings.py): I run this script on my Raspberry Pi 3.
 
-## RAG as an API server based on Flask
-
-Still a very simple implementation, but it really works on Raspberry Pi.
+## Compact RAG as an API server based on Flask
 
 <img src="docs/api_server.jpg" width=700>
 
-- [api.py](./api/api.py)
+### Implementations
 
-## Unit test
+- [Compact RAG modules](./rag)
+- [API server](./api/api.py)
 
-- [rag](./unittest/rag)
-- [api](./unittest/api)
+### Unit tests
+
+- [Unit tests for compact RAG modules](./unittest/rag)
+- [Unit test for the API server](./unittest/api)
 
 ## References
 
