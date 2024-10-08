@@ -17,7 +17,7 @@ And a simple database that can perform similarity search is sufficient. I tried 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
 - Work with various devices via RaspberryPi (and possibly, via a MCU).
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
-- The RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
+- The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom)
 
 ### Running the API server for "virtual-showroom"
 
