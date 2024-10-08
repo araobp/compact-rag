@@ -22,12 +22,10 @@ And a simple database that can perform similarity search is sufficient. I tried 
 ### Running the API server for "virtual-showroom"
 
 Requrements:
-- OpenAI's API key
-- Raspberry Pi
-
-Models:
+- OpenAI API key
 - LLM model: gpt-4o-mini
 - Embeddings model: text-embedding-3-small
+- Raspberry Pi
 
 ```
 $ cd api
