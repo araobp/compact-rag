@@ -2,6 +2,10 @@
 
 (Work in progress)
 
+Very compact RAG that runs on Raspberry Pi.
+
+<img src="./docs/my_raspberry_pi.jpg" width=400>
+
 ## Background
 
 In the past six months, I've built many LLM applications. In conclusion, I want a compact RAG rather than a compact LLM.
@@ -10,14 +14,27 @@ For most cases, unless you're dealing with service providers or large enterprise
 
 And a simple database that can perform similarity search is sufficient. I tried [sqlite-vec](https://github.com/asg017/sqlite-vec), and for the use cases I typically handle, sqlite-vec provided enough performance.
 
-## Goal of this project
+It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects including [virtual-showroom](https://github.com/araobp/virtual-showroom).
 
-<img src="./docs/my_raspberry_pi.jpg" width=400>
+## Goal of this project
 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
 - Work with various devices via RaspberryPi (and possibly, via a MCU).
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
-- The RAG will also work as an API server for my other project: https://github.com/araobp/virtual-showroom
+- The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom)
+
+### Running the API server for "virtual-showroom"
+
+Requrements:
+- OpenAI API key
+- LLM model: gpt-4o-mini
+- Embeddings model: text-embedding-3-small
+- Raspberry Pi
+
+```
+$ cd api
+$ python app.py
+```
 
 ## Architecture
 
@@ -79,3 +96,4 @@ Find "vec0.so" in ./dist directory.
 
 - [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
 - [Bach Network](https://github.com/araobp/bach-network)
+- [OpenAI Realtime API](https://hunch.tools/blog/open-ai-realtime-api-in-python/)
