@@ -5,10 +5,11 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "../rag"))
 from flask import Flask, Blueprint, jsonify, request, make_response, render_template
 import sqlite3
 
+import vector_db
 import embeddings
 import chat
 import tts
-import vector_db
+import webcam
 
 main = Blueprint("main", __name__)
 
@@ -88,13 +89,23 @@ def chat_():
     user_message = request.args.get("user_message", default=None, type=str)
     context = request.args.get("context", default=None, type=str)
     k = request.args.get("k", default=3, type=int)
+    use_webcam = request.args.get("use_webcam", default="false", type=str)
+
+    use_webcam = True if use_webcam == "true" else False
+
+    def _save_img(b64image):
+        with open("./tmp/b64image.txt", "w") as f:
+            f.write(b64image)
 
     if request.method == "PUT":
         data = request.json
         b64image = data["b64image"]
         if SAVE_IMAGE:
-            with open("./tmp/b64image.txt", "w") as f:
-                f.write(b64image)
+            _save_img(b64image)
+    elif use_webcam:
+        b64image = webcam.capture()
+        if SAVE_IMAGE:
+            _save_img(b64image)
     else:
         b64image = None
 
@@ -120,7 +131,10 @@ def chat_():
             b64image=b64image
             )
 
-    return(jsonify({"answer": response}))
+    if use_webcam:
+        return(jsonify({"answer": response, "b64image": b64image}))
+    else:
+        return(jsonify({"answer": response}))
     
 
 @main.route("/tts", methods=["GET"])

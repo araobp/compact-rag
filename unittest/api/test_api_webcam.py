@@ -20,6 +20,7 @@ IMG_CAP_HEIGHT = 720
 IMG_TARGET_HEIGHT = 512
 IMG_TARGET_WIDTH = int(IMG_TARGET_HEIGHT / IMG_CAP_HEIGHT * IMG_CAP_WIDTH)
 
+
 class TestChat(unittest.TestCase):
     """Test the APIs
     """
@@ -65,7 +66,7 @@ class TestChat(unittest.TestCase):
                 json={"b64image": b64image})
             print(r.json())
             self.assertEqual(r.status_code, 200)
-
+            
 
 if __name__ == "__main__":
     unittest.main()
