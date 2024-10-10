@@ -32,7 +32,7 @@ Requrements:
 - Raspberry Pi
 
 ```
-$ cd api
+$ cd app
 $ python app.py
 ```
 
