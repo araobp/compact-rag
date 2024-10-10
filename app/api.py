@@ -59,8 +59,13 @@ def _search(text, context, k):
 
 
 @main.route("/")
-def index():
+def index_page():
     return render_template("index.html")
+
+
+@main.route("/camera")
+def camera_page():
+    return render_template("camera.html")
  
 
 @main.route("/hello")
