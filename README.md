@@ -86,7 +86,7 @@ Find "vec0.so" in ./dist directory.
 - [Unit tests for compact RAG modules](./unittest/rag)
 - [Unit test for the API server](./unittest/api)
 
-### Running the API server for "virtual-showroom"
+## Running the API server for "virtual-showroom"
 
 ```
 $ cd app
