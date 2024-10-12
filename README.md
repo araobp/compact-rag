@@ -22,6 +22,7 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
 - Work with various devices via RaspberryPi (and possibly, via a MCU).
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
 - The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom)
+- Develop AI Agents for some use cases.
 
 ## Requrements
 
