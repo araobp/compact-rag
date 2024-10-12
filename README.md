@@ -23,58 +23,12 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
 - The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom)
 
-### Running the API server for "virtual-showroom"
+## Requrements
 
-Requrements:
 - OpenAI API key
 - LLM model: gpt-4o-mini
 - Embeddings model: text-embedding-3-small
 - Raspberry Pi
-
-```
-$ cd app
-$ python app.py
-```
-
-Refer to [this article](https://ponnala.medium.com/never-let-your-python-http-server-die-step-by-step-guide-to-auto-start-on-boot-and-crash-recovery-1f7b0f94401e) to start the server automatically.
-
-A sample service file is like this:
-
-```
-[Unit]
-Description=Python Generative AI API server
-After=network.target
-
-[Service]
-ExecStart=/usr/bin/python3 -m app --directory <Path to app.py>
-WorkingDirectory=/home/arao/compact-rag/app
-Restart=always
-RestartSec=10
-User=arao
-Group=users
-Environment="OPENAI_API_KEY=<OpenAI API key>"
-
-[Install]
-WantedBy=multi-user.target
-```
-
-After having created the service file, do this:
-
-```
-$ sudo systemctl daemon-reload
-$ sudo systemctl start gen_ai.service
-```
-
-Confirm the daemon process running:
-
-```
-$ sudo systemctl start gen_ai.service
-```
-
-If something wrong happened, check the syslog:
-```
-$ tail /var/log/syslog
-```
 
 ## Architecture
 
@@ -131,6 +85,53 @@ Find "vec0.so" in ./dist directory.
 
 - [Unit tests for compact RAG modules](./unittest/rag)
 - [Unit test for the API server](./unittest/api)
+
+### Running the API server for "virtual-showroom"
+
+```
+$ cd app
+$ python app.py
+```
+
+Refer to [this article](https://ponnala.medium.com/never-let-your-python-http-server-die-step-by-step-guide-to-auto-start-on-boot-and-crash-recovery-1f7b0f94401e) to start the server automatically.
+
+A sample service file is like this:
+
+```
+[Unit]
+Description=Python Generative AI API server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -m app --directory <Path to app.py>
+WorkingDirectory=/home/arao/compact-rag/app
+Restart=always
+RestartSec=10
+User=arao
+Group=users
+Environment="OPENAI_API_KEY=<OpenAI API key>"
+
+[Install]
+WantedBy=multi-user.target
+```
+
+After having created the service file, do this:
+
+```
+$ sudo systemctl daemon-reload
+$ sudo systemctl start gen_ai.service
+```
+
+Confirm the daemon process running:
+
+```
+$ sudo systemctl start gen_ai.service
+```
+
+If something wrong happened, check the syslog:
+```
+$ tail /var/log/syslog
+```
 
 ## References
 
