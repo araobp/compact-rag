@@ -5,9 +5,12 @@
 
 from openai import OpenAI
 
+DEFAULT_ASSISTANT_MESSAGE = "You are an AI assistant."
+DEFAULT_SYSTEM_MESSAGE = "You are good at analyzing images."
+
 client = OpenAI()
 
-def chat(assistant_message, system_message, user_message, b64image=None, callback=None):
+def invoke(user_message, assistant_message=DEFAULT_ASSISTANT_MESSAGE, system_message=DEFAULT_SYSTEM_MESSAGE, b64image=None, callback=None):
 
     content_user = [
                 {

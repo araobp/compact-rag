@@ -16,7 +16,7 @@ class TestChat(unittest.TestCase):
     """
 
     def test_chat(self):
-        result = chat.chat("Please explain Einstein's theory of relativity in 300 characters.") 
+        result = chat.invoke("Please explain Einstein's theory of relativity in 300 characters.") 
         print(result)
         self.assertTrue("relativity" in result.lower()) 
 
@@ -29,7 +29,7 @@ class TestChat(unittest.TestCase):
             print(text, end="")
 
         # Note: this is a synchronous method
-        chat.chat("Please explain Einstein's theory of relativity in 800 characters.", _callback)
+        chat.invoke("Please explain Einstein's theory of relativity in 800 characters.", callback=_callback)
         print()
         self.assertTrue("relativity" in self.result.lower())
 

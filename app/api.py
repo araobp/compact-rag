@@ -19,9 +19,6 @@ SAVE_AUDIO = False
 DB_PATH = "../db/documents.db"
 VECTOR_DB_PATH = "../db/embeddings.db"
 
-ASSISTANT_MESSAGE = "You are an AI assistant."
-SYSTEM_MESSAGE = "You are good at analyzing images."
-
 # OpenAI's Text-to-Speech
 tts_alloy = tts.TTS(voice="alloy", format="mp3")
 tts_nova = tts.TTS(voice="nova", format="mp3")
@@ -85,7 +82,7 @@ def search():
 
 @main.route("/chat", methods=["GET", "PUT"])
 def chat_():
-    system_message = request.args.get("system_message", default=SYSTEM_MESSAGE, type=str)
+    system_message = request.args.get("system_message", default=chat.DEFAULT_SYSTEM_MESSAGE, type=str)
     user_message = request.args.get("user_message", default=None, type=str)
     context = request.args.get("context", default=None, type=str)
     k = request.args.get("k", default=3, type=int)
@@ -124,10 +121,9 @@ def chat_():
 {chunks}
 ''' if context is not None else user_message
 
-    response = chat.chat(
-            assistant_message=ASSISTANT_MESSAGE,
-            system_message=system_message,
+    response = chat.invoke(
             user_message=prompt,
+            system_message=system_message,
             b64image=b64image
             )
 

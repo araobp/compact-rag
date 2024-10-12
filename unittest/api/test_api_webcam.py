@@ -14,6 +14,8 @@ import unittest
 
 BASE_URL = "http://localhost:5050"
 
+SAVE_IMAGE = False
+
 IMG_CAP_WIDTH = 1280
 IMG_CAP_HEIGHT = 720
 
@@ -26,7 +28,9 @@ class TestChat(unittest.TestCase):
     """
 
     def test_chat_with_webcam_image_without_context(self):
-        """Webcam: Buffalo BSW200MBK
+        """Test chat with webcam connected to this computer.
+
+        Webcam: Buffalo BSW200MBK
         https://www.buffalo.jp/product/detail/bsw200mbk.html
         """
 
@@ -56,8 +60,9 @@ class TestChat(unittest.TestCase):
             retval, jpg_img= cv2.imencode('.jpg', img_resized)
             b64image = base64.b64encode(jpg_img).decode('utf-8')
 
-            # with open("./tmp/cap.jpg", "wb") as f:
-            #    f.write(jpg_img)
+            if SAVE_IMAGE:
+                with open("./tmp/cap.jpg", "wb") as f:
+                    f.write(jpg_img)
 
             urlparams = parse.urlencode({
                 "user_message": "What can you see in the attached image?",
