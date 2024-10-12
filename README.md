@@ -38,6 +38,44 @@ $ python app.py
 
 Refer to [this article](https://ponnala.medium.com/never-let-your-python-http-server-die-step-by-step-guide-to-auto-start-on-boot-and-crash-recovery-1f7b0f94401e) to start the server automatically.
 
+A sample service file is like this:
+
+```
+[Unit]
+Description=Python Generative AI API server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -m app --directory <Path to app.py>
+WorkingDirectory=/home/arao/compact-rag/app
+Restart=always
+RestartSec=10
+User=arao
+Group=users
+Environment="OPENAI_API_KEY=<OpenAI API key>"
+
+[Install]
+WantedBy=multi-user.target
+```
+
+After having created the service file, do this:
+
+```
+$ sudo systemctl daemon-reload
+$ sudo systemctl start gen_ai.service
+```
+
+Confirm the daemon process running:
+
+```
+$ sudo systemctl start gen_ai.service
+```
+
+If something wrong happened, check the syslog:
+```
+$ tail /var/log/syslog
+```
+
 ## Architecture
 
 ```
