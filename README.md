@@ -95,6 +95,8 @@ $ cd app
 $ python app.py
 ```
 
+### Starting the API server automatically
+
 Refer to [this article](https://ponnala.medium.com/never-let-your-python-http-server-die-step-by-step-guide-to-auto-start-on-boot-and-crash-recovery-1f7b0f94401e) to start the server automatically.
 
 A sample service file is like this:
