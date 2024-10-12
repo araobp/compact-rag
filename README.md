@@ -88,6 +88,8 @@ Find "vec0.so" in ./dist directory.
 
 ## Running the API server for "virtual-showroom"
 
+[virtual-showroom](https://github.com/araobp/virtual-showroom) uses this API server to access the OpenAI API service.
+
 ```
 $ cd app
 $ python app.py
