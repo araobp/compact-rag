@@ -1,20 +1,20 @@
-# Compact RAG
+# Showroom Controller
 
 (Work in progress)
 
-Very compact RAG that runs on Raspberry Pi.
+Showroom Controller that runs on Raspberry Pi.
 
 <img src="./docs/my_raspberry_pi.jpg" width=400>
 
 ## Background
 
-In the past six months, I've built many LLM applications. In conclusion, I want a compact RAG rather than a compact LLM.
+I will prototype a controller to implement the Personalized CX described in Kotler's Marketing 5.0 for real-world touchpoints.
 
-For most cases, unless you're dealing with service providers or large enterprises, processing data within 10,000 records is sufficient for RAG. [SQLite](https://www.sqlite.org/) is enough for the database.
+For the prototype, I will use electronics platforms like Raspberry Pi and Arduino Uno, integrating various sensors and actuators.
 
-And a simple database that can perform similarity search is sufficient. I tried [sqlite-vec](https://github.com/asg017/sqlite-vec), and for the use cases I typically handle, sqlite-vec provided enough performance.
+In terms of utilizing LLM, I will develop a compact RAG (Retrieval-Augmented Generation) model to run on the Raspberry Pi. As the database for RAG, we will adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
 
-It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects including [virtual-showroom](https://github.com/araobp/virtual-showroom).
+This controller will also function as a controller for [virtual showroom](https://github.com/araobp/virtual-showroom).
 
 ## Goal of this project
 
