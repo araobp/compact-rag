@@ -12,6 +12,8 @@ IMG_CAP_WIDTH = 1280
 IMG_TARGET_HEIGHT = 512
 IMG_TARGET_WIDTH = int(IMG_TARGET_HEIGHT / IMG_CAP_HEIGHT * IMG_CAP_WIDTH)
 
+SKIP_FRAMES = 8  # For the camera to adjust to light
+
 def capture():
     """Capture image from USB webcam connected to Raspberry Pi.
 
@@ -25,7 +27,12 @@ def capture():
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+
+    for i in range(SKIP_FRAMES):
+        result, img = cap.read()
+
     result, img = cap.read()
+
     cap.release()
     
     if result is False:
