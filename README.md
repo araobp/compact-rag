@@ -41,11 +41,11 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
              |
              |
         Compact RAG
-       [RaspberryPi]---+---USB---[Camera with mic]
-             |         |
-         SQLite DB     +---USB---[Speaker]
-                       |
-                       +---USB Serial---[Other sensors/actuators]
+       [Raspberry Pi]---+---USB---[Camera with mic]
+             |          |
+         SQLite DB      +---USB---[Speaker]
+                        |
+                        +---USB Serial---[Arduino UNO]---[Sensors/Actuators]
 
 ```
 
