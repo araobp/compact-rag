@@ -30,6 +30,8 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
 - LLM model: gpt-4o-mini
 - Embeddings model: text-embedding-3-small
 - Raspberry Pi
+- USB devices such as a webcam (optional)
+- Arduino UNO and sensors/actuators (optional)
 
 ## Architecture
 
