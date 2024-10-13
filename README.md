@@ -39,13 +39,9 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
              |
              |
         Compact RAG
-       [RaspberryPi]---+---USB---[Camera]
+       [RaspberryPi]---+---USB---[Camera with mic]
              |         |
          SQLite DB     +---USB---[Speaker]
-                       |
-                       +---USB---[Mic]
-                       |
-                       +---USB---[Keyboard/Mouse]
                        |
                        +---USB Serial---[Other sensors/actuators]
 
