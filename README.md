@@ -19,10 +19,10 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
 ## Goal of this project
 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
-- Work with various devices via RaspberryPi (and possibly, via a MCU).
+- Work with various sensors/actuators via Arduino Uno.
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
-- The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom)
-- Develop AI Agents for some use cases.
+- The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
+- Develop AI Agents for some use cases: "Showroom Controller" (sort of Programmable Logic Controller (PLC)).
 
 ## Requrements
 
@@ -46,7 +46,7 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
                                      |          |
                                  SQLite DB      +---USB---[Speaker]
                                                 |
-                                                +---USB Serial---[Arduino UNO]---[Sensors/Actuators]
+                                                +---USB Serial---[Arduino Uno]---[Sensors/Actuators]
 ```
 
 ## Compiling sqlite-vec on Rapsberry Pi
