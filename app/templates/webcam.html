@@ -8,41 +8,56 @@
 
 <body>
   
-  <div class="flex flex-column m-3">
-	
+  <div class="flex flex-column container w-75">
+    
+    <h1 class="mt-2">Onboard Webcam</h1>
+
     <div class="mt-2 w-100">
       <img id="image" class="w-100">
+      <div id="spinner" class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Asking OpenAI...</span>
+      </div>
     </div>
 
     <div class="mt-2 w-100">
-      <textarea rows="3" id="answer" class="w-100"></textarea>
+      <textarea readonly rows="3" id="answer" class="w-100"></textarea>
     </div>
 
     <div class="mt-2">
-      <button type="button" class="btn btn-primary" id="test" onclick="recognize()">Test</button>
+      <button type="button" class="btn btn-primary float-end" id="test" onclick="recognize()">Test</button>
     </div>
 
   </div>
 
   <script>
     const image = document.getElementById('image');
+    const spinner = document.getElementById('spinner');
     const answer = document.getElementById('answer');
+
+    spinner.style.display = "none";
 
     const USER_MESSAGE = encodeURIComponent("Describe the attached image.");
 
     const recognize = async () => {
 
+      spinner.style.display = "";
+      image.style.display = "none";
+      
       const r = await fetch(`/chat?user_message=${USER_MESSAGE}&use_webcam=true`);
 
+      spinner.style.display = "none";
+      image.style.display = "";
+      
       if (r.status == 200) {
         const json = await r.json();
         answer.value = json.answer;
         image.src = `data:image/jpeg;base64,${json.b64image}`;
       } else {
-        answer.value = r.reason;
+        answer.value = r.statusText;
       }
     }
   </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
