@@ -36,17 +36,17 @@ It is suitable to run RAG on Rapsberry Pi on my home LAN for my other projects i
 ## Architecture
 
 ```
-           Brain
-    [OpenAI API service]
-             |
-             |
-        Compact RAG
-       [Raspberry Pi]---+---USB---[Camera with mic]
-             |          |
-         SQLite DB      +---USB---[Speaker]
-                        |
-                        +---USB Serial---[Arduino UNO]---[Sensors/Actuators]
-
+                                   Brain
+                           [OpenAI API service]
+   Unity app                         |
+[VirtualShowroom]-----+              |
+                      |              |
+   Web apps           |       Compact RAG (app.py)
+[Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
+                                     |          |
+                                 SQLite DB      +---USB---[Speaker]
+                                                |
+                                                +---USB Serial---[Arduino UNO]---[Sensors/Actuators]
 ```
 
 ## Compiling sqlite-vec on Rapsberry Pi
