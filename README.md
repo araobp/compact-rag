@@ -87,14 +87,16 @@ Find "vec0.so" in ./dist directory.
 - [Unit tests for compact RAG modules](./unittest/rag)
 - [Unit test for the API server](./unittest/api)
 
-## Running the API server for "virtual-showroom"
-
-[virtual-showroom](https://github.com/araobp/virtual-showroom) uses this API server to access the OpenAI API service.
+## Running the API server
 
 ```
 $ cd app
 $ python app.py
 ```
+
+The API server provides simple web apps. Access "http://\<IP address of the API server\>:5050" with a web browser.
+
+[virtual-showroom](https://github.com/araobp/virtual-showroom) uses this API server to access the OpenAI API service.
 
 ### Starting the API server automatically
 
