@@ -20,7 +20,7 @@
 
     const recognize = async () => {
 
-      const r = await fetch(`/chat?${USER_MESSAGE}&use_webcam=true`);
+      const r = await fetch(`/chat?user_message=${USER_MESSAGE}&use_webcam=true`);
 
       if (r.status == 200) {
         const json = await r.json();

@@ -61,9 +61,9 @@ def index_page():
     return render_template("index.html")
 
 
-@main.route("/camera")
-def camera_page():
-    return render_template("camera.html")
+@main.route("/webcam")
+def webcam_page():
+    return render_template("webcam.html")
  
 
 @main.route("/hello")
@@ -91,7 +91,7 @@ def chat_():
     use_webcam = True if use_webcam == "true" else False
 
     def _save_img(b64image):
-        with open("./tmp/b64image.txt", "w") as f:
+       with open("./tmp/b64image.txt", "w") as f:
             f.write(b64image)
 
     if request.method == "PUT":
