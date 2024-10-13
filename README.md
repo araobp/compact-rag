@@ -80,7 +80,7 @@ Find "vec0.so" in ./dist directory.
 ### Implementations
 
 - [Compact RAG modules](./rag)
-- [API server](./api/api.py)
+- [API server](./api)
 
 ### Unit tests
 
