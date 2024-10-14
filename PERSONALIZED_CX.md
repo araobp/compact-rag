@@ -24,6 +24,20 @@ Please infer the gender, the age, the race, if wearing glasses, the hair style, 
 {"gender": "male", "age": 25, "race": "asian", "glasses": "no", "hair_style": "bob", "clothing": "suit"}
 ```
 
+## Experiment system
+
+```
+                    [OpenAI API Service]
+                            |
+Billboard                   |
+[Web app]----------------[app.py]---[Content DB]
+                            |
+             [USB webcam]---+
+                            |
+              Push URL      |
+[Smart phone] <- - - [NFC tag writer]
+```
+
 ## Image Classification with Infrared Array Sensor
 
 If using a camera poses privacy concerns, let's try using an infrared array sensor.
