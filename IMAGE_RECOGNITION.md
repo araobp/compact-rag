@@ -54,6 +54,13 @@ Can you guess the clothing of the person in the attached image? Please output th
 {"clothing_style": "suit"}
 ```
 
+### All queries in one prompt
+
+```
+Please infer the gender, the age, the race, if wearing glasses, the hair style, the clothing of the person in the attached image. Output only the data in the following JSON format:
+
+{"gender": "male", "age": 25, "race": "asian", "glasses": "no", "hair_style": "bob", "clothing": "suit"}
+```
 
 ## Image Classification with Infrared Array Sensor
 
