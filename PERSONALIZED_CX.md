@@ -38,6 +38,10 @@ Billboard                   |
 [Smart phone] <- - - [NFC tag writer]
 ```
 
+### Content DB
+
+The database keeps YouTube URLs for various character profiles.
+
 ## Image Classification with Infrared Array Sensor
 
 If using a camera poses privacy concerns, let's try using an infrared array sensor.
