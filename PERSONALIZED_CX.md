@@ -40,7 +40,10 @@ Billboard                   |
 
 ### Content DB
 
-The database keeps YouTube URLs for various character profiles.
+The database keeps YouTube URLs for various character profiles, gender, age and clothing:
+```
+CREATE TABLE youtube_urls (description TEXT, url TEXT);
+```
 
 ## Image Classification with Infrared Array Sensor
 
