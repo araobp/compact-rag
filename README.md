@@ -66,7 +66,7 @@ Find "vec0.so" in ./dist directory.
 
 ### Document sources
 
-- [Tour guides](./ref/virtual_showroom) for [virtual-showroom](https://github.com/araobp/virtual-showroom).
+- [Travel guidebooks](./ref/virtual_showroom) for [virtual-showroom](https://github.com/araobp/virtual-showroom).
 
 ### Chunking and Embeddings
 
