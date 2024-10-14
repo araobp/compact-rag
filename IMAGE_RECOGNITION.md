@@ -8,15 +8,9 @@ As demonstrated by [the experiment](https://youtu.be/1yXJCsx69_0) I conducted, G
 
 What I have observed:
 
-- gpt-4o-mini does not respond to private questions such as gender, age, or facial expressions.
+- gpt-4o-mini is not particularly good at determining a person’s gender, age, or expression and tends to refuse to answer, but it can provide guesses depending on the prompt.
 - It answers accurately to questions about what people are doing, which direction they are facing, or how many people are present.
 - It also provides accurate descriptions of the environment where people are located.
-
-Therefore, gpt-4o-mini is useful for image classification.
-
-The classification of gender, age or fracial expressions needs to rely on other systems such as facial recognition systems or wireless tags.
-
-In conclusion, from a marketing perspective, image classification using GPT-4o-mini enables the delivery of content tailored to people's gestures and the environments they are placed in.
 
 ## Image Classification with Infrared Array Sensor
 
