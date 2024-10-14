@@ -19,9 +19,10 @@ This controller will also function as a controller for [virtual showroom](https:
 ## Goal of this project
 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B.
-- Work with various sensors/actuators via Arduino Uno.
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
 - The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
+- Develop a relay server for apps using OpenAI APIs.
+- Work with various sensors/actuators via Arduino Uno.
 - Develop AI Agents "Showroom Controller" (sort of Programmable Logic Controller (PLC)).
 
 ## Requrements
