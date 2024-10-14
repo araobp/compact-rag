@@ -140,9 +140,9 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
-## Image Recognition with gpt-4o-mini
+## Personalized CX with gpt-4o-mini
 
-=> [IMAGE_RECOGNITION.md](./IMAGE_RECOGNITION.md)
+=> [PERSONALIZED_CX.md](./PERSONALIZED_CX.md)
 
 ## References
 
