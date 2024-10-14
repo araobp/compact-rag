@@ -22,6 +22,7 @@ This controller will also function as a controller for [virtual showroom](https:
 - The RAG will support Hybrid RAG: SQL DB, Vector DB and Graph DB.
 - The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
 - Develop a relay server for local apps using OpenAI APIs.
+- Support Open AI Realtime AI.
 - Work with various sensors/actuators via Arduino Uno.
 - Develop AI Agents "Showroom Controller" (sort of Programmable Logic Controller (PLC)).
 
