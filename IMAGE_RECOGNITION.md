@@ -14,6 +14,19 @@ What I have observed:
 
 Therefore, image recognition and classification by GPT-4o-mini can be applied to the generation of dynamic marketing content tailored to visitors.
 
+## Prompts
+
+### Geneder and age 
+
+```
+"Please guess the gender and age of the person in the previous photo. Output only the data in the following JSON format:
+
+{"gender": "male", "age", 25}
+```
+
+### 
+
+
 ## Image Classification with Infrared Array Sensor
 
 If using a camera poses privacy concerns, let's try using an infrared array sensor.
