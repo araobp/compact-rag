@@ -1,6 +1,6 @@
 # Image Recognition with gpt-4o-mini
 
-## Privacy issues
+## Personal Information Protection
 
 What I have observed:
 
