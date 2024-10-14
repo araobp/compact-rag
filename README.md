@@ -138,6 +138,10 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
+## Image Recognition with gpt-4o-mini
+
+=> [IMAGE_RECOGNITION.md](./IMAGE_RECOGNITION.md)
+
 ## References
 
 - [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
