@@ -1,6 +1,6 @@
-# Personalzed Content
+# Personalized Customer Experiences (CX)
 
-## What Generative AI can contiribute to Personalized Content
+## What Generative AI can contiribute to Personalized CX
 
 ### Object Detection
 
