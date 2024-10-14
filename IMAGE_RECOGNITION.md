@@ -27,7 +27,7 @@ Please guess the gender and age of the person in the attached image. Output only
 ### Hair sytle
 
 ```
-Please guess the hair style of the person in the output image. Output only the data in the following JSON format:
+Please guess the hair style of the person in the attached image. Output only the data in the following JSON format:
 
 {"hairstyle": "bob"}
 ```
@@ -35,7 +35,7 @@ Please guess the hair style of the person in the output image. Output only the d
 ### Glasses
 
 ```
-Is the person in the previous image wearing glasses? Please answer with "Yes" or "No".
+Is the person in the attached image wearing glasses? Please answer with "Yes" or "No".
 ```
 
 ## Image Classification with Infrared Array Sensor
