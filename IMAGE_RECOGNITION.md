@@ -14,4 +14,6 @@ What I have observed:
 
 Therefore, gpt-4o-mini is useful for image classification.
 
-From a marketing perspective, image classification using GPT-4o-mini enables the delivery of content tailored to people's gestures and the environments they are placed in.
+The classification of gender, age or fracial expressions needs to rely on other systems such as facial recognition systems or wireless tags.
+
+In conclusion, from a marketing perspective, image classification using GPT-4o-mini enables the delivery of content tailored to people's gestures and the environments they are placed in.
