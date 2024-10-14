@@ -19,7 +19,7 @@ Therefore, image recognition and classification by GPT-4o-mini can be applied to
 ### Geneder and age 
 
 ```
-"Please guess the gender and age of the person in the previous photo. Output only the data in the following JSON format:
+Please guess the gender and age of the person in the attached image. Output only the data in the following JSON format:
 
 {"gender": "male", "age", 25}
 ```
