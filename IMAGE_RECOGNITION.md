@@ -24,6 +24,14 @@ Please guess the gender and age of the person in the attached image. Output only
 {"gender": "male", "age", 25}
 ```
 
+### Races
+
+```
+Please infer the race of the person in the attached image. Output only the data in the following JSON format:
+
+{"race": "white"}
+```
+
 ### Hair sytle
 
 ```
@@ -37,6 +45,15 @@ Please guess the hair style of the person in the attached image. Output only the
 ```
 Is the person in the attached image wearing glasses? Please answer with "Yes" or "No".
 ```
+
+### Clothing
+
+```
+Can you guess the clothing of the person in the attached image? Please output the data in the following JSON format.
+
+{"clothing_style": "suit"}
+```
+
 
 ## Image Classification with Infrared Array Sensor
 
