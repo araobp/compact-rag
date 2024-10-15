@@ -110,13 +110,13 @@ Description=Python Generative AI API server
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 -m app --directory <Path to app.py>
-WorkingDirectory=/home/arao/compact-rag/app
+ExecStart=/usr/bin/python3 -m app --directory <Path to "app" folder>
+WorkingDirectory=<Path to "app" folder>
 Restart=always
 RestartSec=10
-User=arao
+User=<Your user name>
 Group=users
-Environment="OPENAI_API_KEY=<OpenAI API key>"
+Environment=PYTHONPATH=<Path to this repo on Raspberry Pi>:$PYTHONPATH OPENAI_API_KEY=<OpenAI API key>
 
 [Install]
 WantedBy=multi-user.target
