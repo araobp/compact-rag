@@ -71,7 +71,7 @@ Find "vec0.so" in ./dist directory.
 - [Step 1. Generating Chunks](./ref/Chunks.ipynb): I run this notebook on my Mac.
 - [Step 2. Calculating embeddings](./ref/calc_embeddings.py): I run this script on my Raspberry Pi 3.
 
-### Implementations
+## Implementations
 
 - [cx package](./cx) ... Python libraries for Personalized CX
 - [API server](./app) ... API Server as a showroom controller
@@ -83,7 +83,7 @@ Find "vec0.so" in ./dist directory.
 - [Unit tests for "cx" package](./unittest/cx)
 - [Unit test for the API server](./unittest/api)
 
-## Running the API server
+### Running the API server
 
 ```
 $ cd app
@@ -94,7 +94,7 @@ The API server provides simple web apps. Access "http://\<IP address of the API 
 
 [virtual-showroom](https://github.com/araobp/virtual-showroom) uses this API server to access the OpenAI API service.
 
-### Starting the API server automatically
+#### Starting the API server automatically
 
 Refer to [this article](https://ponnala.medium.com/never-let-your-python-http-server-die-step-by-step-guide-to-auto-start-on-boot-and-crash-recovery-1f7b0f94401e) to start the server automatically.
 
