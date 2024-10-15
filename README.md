@@ -82,7 +82,7 @@ Find "vec0.so" in ./dist directory.
 
 ### Unit tests
 
-- [Unit tests for "cx" package](./unittest/rag)
+- [Unit tests for "cx" package](./unittest/cx)
 - [Unit test for the API server](./unittest/api)
 
 ## Running the API server
