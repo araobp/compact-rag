@@ -79,12 +79,12 @@ Find "vec0.so" in ./dist directory.
 
 ### Implementations
 
-- [Compact RAG modules](./rag)
-- [API server](./app)
+- [cx package](./cx) ... Python libraries for Personalized CX
+- [API server](./app) ... API Server as a showroom controller
 
 ### Unit tests
 
-- [Unit tests for compact RAG modules](./unittest/rag)
+- [Unit tests for "cx" package](./unittest/rag)
 - [Unit test for the API server](./unittest/api)
 
 ## Running the API server
