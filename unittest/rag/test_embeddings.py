@@ -3,13 +3,12 @@
 # Author: araobp@github.com
 
 import sys
-sys.path.append("../../rag")
 
-import embeddings 
+from cx.rag import embeddings 
 import unittest
 
 TEXTS1 = ["hello!", "how are you?", "I'm fine, thank you!"]
-TEXTS2 = ("hello!", "how are you?", "I'm fine, thank you!")
+TEXTS2 = ("hi!", "I am free.", "Let's go shopping.")
 
 class TestEmbeddings(unittest.TestCase):
     """Test embeddings package

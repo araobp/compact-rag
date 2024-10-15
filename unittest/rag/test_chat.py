@@ -2,10 +2,7 @@
 # Date: 2024/10/04
 # Author: araobp@github.com
 
-import sys
-sys.path.append("../../rag")
-
-import chat 
+from cx.rag import chat 
 import unittest
 
 def callback(chunk):

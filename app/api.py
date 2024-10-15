@@ -1,15 +1,11 @@
 import os
 import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), "../rag"))
 
 from flask import Flask, Blueprint, jsonify, request, make_response, render_template
 import sqlite3
 
-import vector_db
-import embeddings
-import chat
-import tts
-import webcam
+from cx.rag import chat, embeddings, vector_db, tts
+from cx.devices import webcam
 
 main = Blueprint("main", __name__)
 

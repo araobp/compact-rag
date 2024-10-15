@@ -2,11 +2,7 @@
 # Date: 2024/10/03
 # Author: araobp@github.com
 
-import sys
-sys.path.append("../../rag")
-
-import embeddings
-import vector_db
+from cx.rag import embeddings, vector_db
 import unittest
 
 EMBEDDINGS_DB_PATH = "./test.db"
