@@ -8,7 +8,7 @@ Showroom Controller that runs on Raspberry Pi.
 
 ## Background
 
-I will prototype a controller to implement the Personalized CX described in Kotler's Marketing 5.0 for real-world customer touchpoints.
+I will prototype a controller to implement the Personalized CX described in **Kotler's Marketing 5.0** for real-world customer touchpoints.
 
 For the prototype, I will use electronics platforms like Raspberry Pi and Arduino Uno, integrating various sensors and actuators.
 
