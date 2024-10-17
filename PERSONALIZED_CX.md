@@ -23,9 +23,16 @@ Therefore, image recognition and classification by GPT-4o-mini can be applied to
 ### Prompt for character profiling
 
 ```
-Please infer the gender, the age, the race, if wearing glasses, the hair style, the clothing of the person in the attached image. Output only the data in the following JSON format:
+Please guess the gender, the age, the race, if wearing glasses, the hair style, the clothing of the person in the attached image. Never answer like "unknown" even if you are confident with the answer. Output only the data in the following format:
 
-{"gender": "male", "age": 25, "race": "asian", "glasses": "no", "hair_style": "bob", "clothing": "suit"}
+- male, 40, asian, yes, short, t-shirt
+- female, 25, caucasian, no, straight long, suit
+- ... 
+```
+
+Answered by gpt-4o-mini:
+```
+- male, 30, asian, no, short, polo shirt
 ```
 
 ## Experiment system
