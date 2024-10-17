@@ -138,7 +138,8 @@ $ tail /var/log/syslog
 
 ## Personalized CX with gpt-4o-mini
 
-=> [CHARACTER_PROFILING.md](./CHARACTER_PROFILING.md)
+- [Character Profiling](./CHARACTER_PROFILING.md)
+- [Hand Gesture Recognition](./HAND_GESTURE_RECOGNITION.md)
 
 ## References
 
