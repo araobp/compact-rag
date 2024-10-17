@@ -49,6 +49,10 @@ Billboard                   |
 [Smart phone] <- - - [NFC tag writer]
 ```
 
+### NFC tag writer
+
+Refer to my previous work: https://github.com/araobp/arduino-nfc-tag
+
 ### Content DB
 
 The database keeps YouTube URLs for various character profiles, gender, age and clothing:
