@@ -1,4 +1,4 @@
-# Personalized Customer Experiences (CX)
+# Character Profiling
 
 This pages is just technical: I know it is difficult to apply an Open AI's LLM to automatic personal profiling in terms of personal info protection, and we need an on-premise LLM instead.
 
