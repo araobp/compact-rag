@@ -61,3 +61,8 @@ CREATE TABLE youtube_urls (description TEXT, url TEXT);
 If using a camera poses privacy concerns, let's try using an infrared array sensor.
 
 <img src="./docs/infrared_array_sensor_with_chatgpt.jpg" width=600>
+
+## References
+
+- [CHATGPT AND BIOMETRICS: AN ASSESSMENT OF FACE RECOGNITION, GENDER
+DETECTION, AND AGE ESTIMATION CAPABILITIES](https://arxiv.org/pdf/2403.02965)
