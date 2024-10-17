@@ -138,9 +138,7 @@ $ tail /var/log/syslog
 
 ## Personalized CX with gpt-4o-mini
 
-This is a main application of this project.
-
-=> [PERSONALIZED_CX.md](./PERSONALIZED_CX.md)
+=> [CHARACTER_PROFILING.md](./CHARACTER_PROFILING.md)
 
 ## References
 
