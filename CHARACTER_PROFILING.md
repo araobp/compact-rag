@@ -1,6 +1,6 @@
 # Character Profiling
 
-This pages is just technical: I know it is difficult to apply an Open AI's LLM to automatic personal profiling in terms of personal info protection, and we need an on-premise LLM instead.
+This page is just technical: I know it is difficult to apply an Open AI's LLM to automatic personal profiling in terms of personal info protection, and we need an on-premise LLM instead.
 
 A certain showroom obtains consent from visitors for the use of facial recognition. Similarly, consent should be obtained when using generative AI for profiling. If that is not possible, other methods, such as Bluetooth tags, will need to be relied upon.
 
