@@ -60,6 +60,9 @@ The database keeps YouTube URLs for various character profiles, gender, age and 
 CREATE TABLE youtube_urls (description TEXT, url TEXT);
 ```
 
+It uses the YouTube Data API to collect the info: https://developers.google.com/youtube/v3/docs/search
+
+
 ## References
 
 - [CHATGPT AND BIOMETRICS: AN ASSESSMENT OF FACE RECOGNITION, GENDER
