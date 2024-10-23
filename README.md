@@ -55,7 +55,7 @@ This controller will also function as a controller for [virtual showroom](https:
 $ git clone https://github.com/asg017/sqlite-vec
 $ cd sqlite-vec
 $ sudo apt-get install libsqlite3-dev
-$ make all
+$ make loadable 
 ```
 
 Find "vec0.so" in ./dist directory.
