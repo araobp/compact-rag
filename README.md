@@ -1,4 +1,4 @@
-# Showroom Controller
+# Compact RAG
 
 (Work in progress)
 
