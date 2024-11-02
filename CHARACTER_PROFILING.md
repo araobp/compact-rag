@@ -1,16 +1,10 @@
 # Character Profiling
 
-This page is just technical: I know it is difficult to apply an Open AI's LLM to automatic personal profiling in terms of personal info protection, and we need an on-premise LLM instead.
-
-A certain showroom obtains consent from visitors for the use of facial recognition. Similarly, consent should be obtained when using generative AI for profiling. If that is not possible, other methods, such as Bluetooth tags, will need to be relied upon.
-
-## What Generative AI can contiribute to Personalized CX
-
-### Object Detection
+## Object Detection
 
 As demonstrated by [the experiment](https://youtu.be/1yXJCsx69_0) I conducted, GPT-4o-mini excels at image recognition and can perform object detection to some extent. However, for accurately identifying the positions of objects, it is better to rely on AI specifically designed for object detection.
 
-### Image Classification
+## Image Classification
 
 What I have observed:
 
@@ -20,7 +14,7 @@ What I have observed:
 
 Therefore, image recognition and classification by GPT-4o-mini can be applied to the generation of dynamic marketing content tailored to visitors.
 
-### Prompt for character profiling
+## Prompt for character profiling
 
 ```
 Please guess the gender, the age, the race, if wearing glasses, the hair style, the clothing of the person in the attached image. Never answer like "unknown" even if you are confident with the answer. Output only the data in the following format:
