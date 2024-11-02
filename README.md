@@ -14,7 +14,7 @@ This controller will also function as a controller for [virtual showroom](https:
 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B, supporting Hybrid RAG: SQL DB and Vector DB.
 - The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
-- Develop AI Agents workign with an node-based editor such as Node-RED.
+- Develop AI Agents workign with an node-based editor.
 
 ## Requrements
 
@@ -126,7 +126,7 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
-## Mini AI Agent framework with Node-RED
+## Mini AI Agent framework
 
 ...
 
