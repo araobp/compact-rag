@@ -124,7 +124,7 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
-## Personalized CX with gpt-4o-mini
+## Some experiments with gpt-4o-mini
 
 - [Character Profiling](./CHARACTER_PROFILING.md)
 - [Hand Gesture Recognition](./HAND_GESTURE_RECOGNITION.md)
