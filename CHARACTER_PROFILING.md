@@ -35,34 +35,6 @@ Answered by gpt-4o-mini:
 - male, 30, asian, no, short, polo shirt
 ```
 
-## Experiment system
-
-```
-                    [OpenAI API Service]
-                            |
-Billboard                   |
-[Web app]----------------[app.py]---[Content DB]
-                            |
-             [USB webcam]---+
-                            |
-              Push URL      |
-[Smart phone] <- - - [NFC tag writer]
-```
-
-### NFC tag writer
-
-Refer to my previous work: https://github.com/araobp/arduino-nfc-tag
-
-### Content DB
-
-The database keeps YouTube URLs for various character profiles, gender, age and clothing:
-```
-CREATE TABLE youtube_urls (description TEXT, url TEXT);
-```
-
-It uses the YouTube Data API to collect the info: https://developers.google.com/youtube/v3/docs/search
-
-
 ## References
 
 - [CHATGPT AND BIOMETRICS: AN ASSESSMENT OF FACE RECOGNITION, GENDER
