@@ -31,7 +31,7 @@ This controller will also function as a controller for [virtual showroom](https:
    Unity app                         |
 [VirtualShowroom]-----+              |
                       |              |
-   Web apps           |    Showroom Controller (app.py)
+   Web apps           |        Compact RAG (app.py)
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
                                      |          |
                                  SQLite DB      +---USB---[Speaker]
