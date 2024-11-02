@@ -2,27 +2,19 @@
 
 (Work in progress)
 
-Showroom Controller that runs on Raspberry Pi.
-
 <img src="./docs/my_raspberry_pi.jpg" width=400>
 
 ## Background
 
-I will prototype a controller to implement the Personalized CX described in **Kotler's Marketing 5.0** for real-world customer touchpoints.
-
-For the prototype, I will use electronics platforms like Raspberry Pi and Arduino Uno, integrating various sensors and actuators.
-
-In terms of utilizing LLM, I will develop a compact RAG (Retrieval-Augmented Generation) model to run on the Raspberry Pi. As the database for RAG, we will adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
+I will develop a compact RAG (Retrieval-Augmented Generation) model to run on the Raspberry Pi. As the database for RAG, we will adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
 
 This controller will also function as a controller for [virtual showroom](https://github.com/araobp/virtual-showroom).
 
 ## Goal of this project
 
-- Develop a compact RAG that can run on my Raspberry Pi 3 Model B, supporting Hybrid RAG: SQL DB, Vector DB and Graph DB.
+- Develop a compact RAG that can run on my Raspberry Pi 3 Model B, supporting Hybrid RAG: SQL DB and Vector DB.
 - The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
-- Support Open AI Realtime AI, althouth it seems expensive for me...
-- Work with various sensors/actuators via Arduino Uno.
-- Develop AI Agents "Showroom Controller" (sort of Programmable Logic Controller (PLC)).
+- Develop AI Agents workign with an node-based editor such as Node-RED.
 
 ## Requrements
 
@@ -30,9 +22,7 @@ This controller will also function as a controller for [virtual showroom](https:
 - LLM model: gpt-4o-mini
 - Embeddings model: text-embedding-3-small
 - Raspberry Pi
-- USB devices such as a webcam (optional)
-- Arduino UNO and sensors/actuators (optional)
-
+- 
 ## Architecture
 
 ```
@@ -45,8 +35,6 @@ This controller will also function as a controller for [virtual showroom](https:
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
                                      |          |
                                  SQLite DB      +---USB---[Speaker]
-                                                |
-                                                +---USB Serial---[Arduino Uno]---[Sensors/Actuators]
 ```
 
 ## Compiling sqlite-vec on Rapsberry Pi
