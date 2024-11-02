@@ -22,7 +22,8 @@ This controller will also function as a controller for [virtual showroom](https:
 - LLM model: gpt-4o-mini
 - Embeddings model: text-embedding-3-small
 - Raspberry Pi
-- 
+- Node-RED (optional)
+  
 ## Architecture
 
 ```
@@ -33,8 +34,9 @@ This controller will also function as a controller for [virtual showroom](https:
                       |              |
    Web apps           |        Compact RAG (app.py)
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
-                                     |          |
-                                 SQLite DB      +---USB---[Speaker]
+                      |              |          |
+[Node RED]------------+          SQLite DB      +---USB---[Speaker]
+
 ```
 
 ## Compiling sqlite-vec on Rapsberry Pi
@@ -123,6 +125,11 @@ If something wrong happened, check the syslog:
 ```
 $ tail /var/log/syslog
 ```
+
+## Mini AI Agent framework with Node-RED
+
+...
+
 
 ## Extra: Some experiments with gpt-4o-mini
 
