@@ -1,17 +1,15 @@
-# Compact RAG
+_# Compact RAG
 
 <img src="./docs/my_raspberry_pi.jpg" width=400>
 
 ## Background
 
-I will develop a compact RAG (Retrieval-Augmented Generation) model to run on the Raspberry Pi. As the database for RAG, we will adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
-
-This controller will also function as a controller for [virtual showroom](https://github.com/araobp/virtual-showroom).
+I develop a compact RAG (Retrieval-Augmented Generation) model to run on the Raspberry Pi. As the database for RAG, I adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
 
 ## Goal of this project
 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B, supporting Hybrid RAG: SQL DB and Vector DB.
-- The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
+- The RAG also works as an API server for my other projects: [virtual-showroom](https://github.com/araobp/virtual-showroom) and [node-red-ai-agents](https://github.com/araobp/node-red-ai-agents).
 
 ## Requrements
 
@@ -20,7 +18,6 @@ This controller will also function as a controller for [virtual showroom](https:
 - Embeddings model: text-embedding-3-small
 - Raspberry Pi
 
-  
 ## Architecture
 
 ```
@@ -31,9 +28,9 @@ This controller will also function as a controller for [virtual showroom](https:
                       |              |
    Web apps           |        Compact RAG (app.py)
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
-                                     |          |
-                                 SQLite DB      +---USB---[Speaker]
-
+                      |              |          |
+  AI Agents           |          SQLite DB      +---USB---[Speaker]
+[Node-RED]------------+
 ```
 
 ## Compiling sqlite-vec on Rapsberry Pi
@@ -131,3 +128,4 @@ https://github.com/asg017/sqlite-vec/issues/26
 
 - [Character Profiling](./CHARACTER_PROFILING.md)
 - [Hand Gesture Recognition](./HAND_GESTURE_RECOGNITION.md)
+_
