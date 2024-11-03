@@ -60,8 +60,8 @@ Find "vec0.so" in ./dist directory.
 
 ## Implementations
 
-- [cx package](./cx) ... Python libraries for Personalized CX
-- [API server](./app) ... API Server as a showroom controller
+- [cx package](./cx) ... Python package
+- [API server](./app) ... API Server
 
 <img src="docs/api_server.jpg" width=700>
 
