@@ -123,6 +123,9 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
+## sqlite-vec metadata filtering
+
+https://github.com/asg017/sqlite-vec/issues/26
 
 ## Extra: Some experiments with gpt-4o-mini
 
