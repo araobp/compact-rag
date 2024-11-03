@@ -4,11 +4,11 @@ _# Compact RAG
 
 ## Background
 
-I develop a compact RAG (Retrieval-Augmented Generation) model to run on the Raspberry Pi. As the database for RAG, I adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
+I develop a compact RAG (Retrieval-Augmented Generation) that runs on Raspberry Pi. As the database for RAG, I adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
 
 ## Goal of this project
 
-- Develop a compact RAG that can run on my Raspberry Pi 3 Model B, supporting Hybrid RAG: SQL DB and Vector DB.
+- Develop a compact RAG that runs on Raspberry Pi, supporting Hybrid RAG: SQL DB and Vector DB.
 - The RAG also works as an API server for my other projects: [virtual-showroom](https://github.com/araobp/virtual-showroom) and [node-red-ai-agents](https://github.com/araobp/node-red-ai-agents).
 
 ## Requrements
