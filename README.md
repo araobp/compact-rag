@@ -1,7 +1,5 @@
 # Compact RAG
 
-(Work in progress)
-
 <img src="./docs/my_raspberry_pi.jpg" width=400>
 
 ## Background
