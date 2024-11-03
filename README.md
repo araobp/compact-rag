@@ -23,13 +23,13 @@ I develop a compact RAG (Retrieval-Augmented Generation) that runs on Raspberry 
 ```
                                    Brain
                            [OpenAI API service]
-   Unity app                         |
+Unity app                            |
 [VirtualShowroom]-----+              |
                       |              |
-   Web apps           |        Compact RAG (app.py)
+Web apps              |        Compact RAG (app.py)
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
                       |              |          |
-   AI Agents          |          SQLite DB      +---USB---[Speaker]
+AI Agents             |          SQLite DB      +---USB---[Speaker]
 [Node-RED]------------+
 ```
 
