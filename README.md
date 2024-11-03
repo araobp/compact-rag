@@ -14,7 +14,6 @@ This controller will also function as a controller for [virtual showroom](https:
 
 - Develop a compact RAG that can run on my Raspberry Pi 3 Model B, supporting Hybrid RAG: SQL DB and Vector DB.
 - The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
-- Develop AI Agents workign with an node-based editor.
 
 ## Requrements
 
@@ -22,7 +21,7 @@ This controller will also function as a controller for [virtual showroom](https:
 - LLM model: gpt-4o-mini
 - Embeddings model: text-embedding-3-small
 - Raspberry Pi
-- Node-RED (optional)
+
   
 ## Architecture
 
@@ -34,8 +33,8 @@ This controller will also function as a controller for [virtual showroom](https:
                       |              |
    Web apps           |        Compact RAG (app.py)
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
-                      |              |          |
-[Node RED]------------+          SQLite DB      +---USB---[Speaker]
+                                     |          |
+                                 SQLite DB      +---USB---[Speaker]
 
 ```
 
@@ -126,18 +125,8 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
-## Mini AI Agent framework
-
-...
-
 
 ## Extra: Some experiments with gpt-4o-mini
 
 - [Character Profiling](./CHARACTER_PROFILING.md)
 - [Hand Gesture Recognition](./HAND_GESTURE_RECOGNITION.md)
-
-## References
-
-- [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
-- [Bach Network](https://github.com/araobp/bach-network)
-- [OpenAI Realtime API](https://hunch.tools/blog/open-ai-realtime-api-in-python/)
