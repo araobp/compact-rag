@@ -1,4 +1,4 @@
-_# Compact RAG
+# Compact RAG
 
 <img src="./docs/my_raspberry_pi.jpg" width=400>
 
