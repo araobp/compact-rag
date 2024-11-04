@@ -82,8 +82,10 @@ def chat_():
     user_message = request.args.get("user_message", default=None, type=str)
     context = request.args.get("context", default=None, type=str)
     k = request.args.get("k", default=3, type=int)
+    json_output = request.args.get("json_output", default="false", type=str)
     use_webcam = request.args.get("use_webcam", default="false", type=str)
 
+    json_output = True if json_output == "true" else False
     use_webcam = True if use_webcam == "true" else False
 
     def _save_img(b64image):
@@ -120,7 +122,8 @@ def chat_():
     response = chat.invoke(
             user_message=prompt,
             system_message=system_message,
-            b64image=b64image
+            b64image=b64image,
+            json_output=json_output
             )
 
     if use_webcam:
@@ -146,3 +149,9 @@ def text_to_speech():
     response.mimetype = "audio/mpeg"
 
     return response
+
+@main.route("/camera", methods=["GET"])
+def capture():
+    b64image = webcam.capture()
+    return (jsonify({"b64image": b64image}))
+    

@@ -10,7 +10,7 @@ DEFAULT_SYSTEM_MESSAGE = "You are good at analyzing images."
 
 client = OpenAI()
 
-def invoke(user_message, assistant_message=DEFAULT_ASSISTANT_MESSAGE, system_message=DEFAULT_SYSTEM_MESSAGE, b64image=None, callback=None):
+def invoke(user_message, assistant_message=DEFAULT_ASSISTANT_MESSAGE, system_message=DEFAULT_SYSTEM_MESSAGE, b64image=None, json_output=False, callback=None):
 
     content_user = [
                 {
@@ -31,6 +31,8 @@ def invoke(user_message, assistant_message=DEFAULT_ASSISTANT_MESSAGE, system_mes
     if system_message:
         messages.append({"role": "system", "content": system_message})
 
+    response_format = {"type": "json_object"} if json_output else None 
+
     if callback:
         stream = client.chat.completions.create(
             model="gpt-4o-mini",
@@ -49,6 +51,7 @@ def invoke(user_message, assistant_message=DEFAULT_ASSISTANT_MESSAGE, system_mes
         resp = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=messages,
+            response_format=response_format
         )
 
         return resp.choices[0].message.content
