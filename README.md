@@ -1,20 +1,15 @@
 # Compact RAG
 
-(Work in progress)
-
 <img src="./docs/my_raspberry_pi.jpg" width=400>
 
 ## Background
 
-I will develop a compact RAG (Retrieval-Augmented Generation) model to run on the Raspberry Pi. As the database for RAG, we will adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
-
-This controller will also function as a controller for [virtual showroom](https://github.com/araobp/virtual-showroom).
+I develop a compact RAG (Retrieval-Augmented Generation) that runs on Raspberry Pi. As the database for RAG, I adopt SQLite and implement a vector DB using [sqlite-vec](https://github.com/asg017/sqlite-vec).
 
 ## Goal of this project
 
-- Develop a compact RAG that can run on my Raspberry Pi 3 Model B, supporting Hybrid RAG: SQL DB and Vector DB.
-- The RAG will also work as an API server for my other project: [virtual-showroom](https://github.com/araobp/virtual-showroom).
-- Develop AI Agents workign with an node-based editor.
+- Develop a compact RAG that runs on Raspberry Pi, supporting Hybrid RAG: SQL DB and Vector DB.
+- The RAG also works as an API server for my other projects: [virtual-showroom](https://github.com/araobp/virtual-showroom) and [node-red-ai-agents](https://github.com/araobp/node-red-ai-agents).
 
 ## Requrements
 
@@ -22,21 +17,20 @@ This controller will also function as a controller for [virtual showroom](https:
 - LLM model: gpt-4o-mini
 - Embeddings model: text-embedding-3-small
 - Raspberry Pi
-- Node-RED (optional)
-  
+
 ## Architecture
 
 ```
                                    Brain
                            [OpenAI API service]
-   Unity app                         |
+Unity app                            |
 [VirtualShowroom]-----+              |
                       |              |
-   Web apps           |        Compact RAG (app.py)
+Web apps              |        Compact RAG (app.py)
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
                       |              |          |
-[Node RED]------------+          SQLite DB      +---USB---[Speaker]
-
+AI Agents             |          SQLite DB      +---USB---[Speaker]
+[Node-RED]------------+
 ```
 
 ## Compiling sqlite-vec on Rapsberry Pi
@@ -63,8 +57,8 @@ Find "vec0.so" in ./dist directory.
 
 ## Implementations
 
-- [cx package](./cx) ... Python libraries for Personalized CX
-- [API server](./app) ... API Server as a showroom controller
+- [cx package](./cx) ... Python package
+- [API server](./app) ... API Server
 
 <img src="docs/api_server.jpg" width=700>
 
@@ -126,18 +120,12 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
-## Mini AI Agent framework
+## sqlite-vec metadata filtering
 
-...
-
+https://github.com/asg017/sqlite-vec/issues/26
 
 ## Extra: Some experiments with gpt-4o-mini
 
 - [Character Profiling](./CHARACTER_PROFILING.md)
 - [Hand Gesture Recognition](./HAND_GESTURE_RECOGNITION.md)
-
-## References
-
-- [HybridRAG: Integrating Knowledge Graphs and Vector Retrieval Augmented Generation for Efficient Information Extraction](https://arxiv.org/html/2408.04948v1)
-- [Bach Network](https://github.com/araobp/bach-network)
-- [OpenAI Realtime API](https://hunch.tools/blog/open-ai-realtime-api-in-python/)
+_
