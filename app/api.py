@@ -152,6 +152,10 @@ def text_to_speech():
 
 @main.route("/camera", methods=["GET"])
 def capture():
-    b64image = webcam.capture()
+    skip_frames = request.args.get("skip_frames", default=0, type=int)
+    rect_image = request.args.get("rect_image", default="false", type=str)
+    rect_image = True if rect_image == "true" else False
+
+    b64image = webcam.capture(skip_frames=skip_frames, rect_image=rect_image)
     return (jsonify({"b64image": b64image}))
     
