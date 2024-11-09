@@ -9,7 +9,7 @@ I develop a compact RAG (Retrieval-Augmented Generation) that runs on Raspberry 
 ## Goal of this project
 
 - Develop a compact RAG that runs on Raspberry Pi, supporting Hybrid RAG: SQL DB and Vector DB.
-- The RAG also works as an API server for my other projects: [virtual-showroom](https://github.com/araobp/virtual-showroom) and [node-red-ai-agents](https://github.com/araobp/node-red-ai-agents).
+- The RAG also works as an API server for my other projects: [virtual-showroom](https://github.com/araobp/virtual-showroom) and [node-red-genai](https://github.com/araobp/node-red-genai).
 
 ## Requrements
 
@@ -29,7 +29,7 @@ Unity app                            |
 Web apps              |        Compact RAG (app.py)
 [Web Browser]---------+------- [Raspberry Pi]---+---USB---[Camera with mic]
                       |              |          |
-AI Agents             |          SQLite DB      +---USB---[Speaker]
+GenAI                 |          SQLite DB      +---USB---[Speaker]
 [Node-RED]------------+
 ```
 
