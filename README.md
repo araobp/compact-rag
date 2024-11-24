@@ -9,7 +9,7 @@ I develop a compact RAG (Retrieval-Augmented Generation) that runs on Raspberry 
 ## Goal of this project
 
 - Develop a compact RAG that runs on Raspberry Pi, supporting Hybrid RAG: SQL DB and Vector DB.
-- The RAG also works as an API server for my other projects: [virtual-showroom](https://github.com/araobp/virtual-showroom) and [node-red-genai](https://github.com/araobp/node-red-genai).
+- The RAG also works as an API server for my other projects: [virtual-showroom](https://github.com/araobp/virtual-showroom).
 
 ## Requrements
 
