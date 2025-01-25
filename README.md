@@ -122,10 +122,10 @@ $ tail /var/log/syslog
 
 ## sqlite-vec metadata filtering
 
-https://github.com/asg017/sqlite-vec/issues/26
+- https://alexgarcia.xyz/sqlite-vec/features/vec0.html
 
 ## Extra: Some experiments with gpt-4o-mini
 
 - [Character Profiling](./CHARACTER_PROFILING.md)
 - [Hand Gesture Recognition](./HAND_GESTURE_RECOGNITION.md)
-_
+
