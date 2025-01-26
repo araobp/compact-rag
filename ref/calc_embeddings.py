@@ -1,13 +1,14 @@
 # Embeddings calcuration for the chunks
-# Date: 2024/10/06
+# Date: 2024/10/06, 2025/01/26
 # Author: araobp@github.com
 
 import sys
-sys.path.append("../rag")
+sys.path.append("..")
+sys.path.append("../cx")
 
 import sqlite3
-import embeddings
-import vector_db
+from rag import vector_db
+from rag import embeddings
 
 DB_PATH = "../db/documents.db"
 VECTOR_DB_PATH = "../db/embeddings.db"
@@ -15,15 +16,15 @@ VECTOR_DB_PATH = "../db/embeddings.db"
 # Read all the chunks
 with sqlite3.connect(DB_PATH) as conn:
     cur = conn.cursor()
-    records = cur.execute("SELECT id, collection, chunk FROM chunks").fetchall()
+    records = cur.execute("SELECT collection, context, chunk FROM chunks").fetchall()
 
 data = {}
 
 for r in records:
-    collection = r[1]
+    collection = r[0]
     if collection not in data:
         data[collection] = []
-    data[collection].append([r[0], r[2]])
+    data[collection].append([r[1], r[2]])
 
 N = 10  # Batch size for embeddings calculation
 
@@ -34,11 +35,12 @@ for collection in data.keys():
     print(f"Collection: {collection}")
     items = data[collection]
     for i in range(0, len(items), N):
-        ids, chunks = zip(*items[i:i+N])
+        contexts, chunks = zip(*items[i:i+N])
+        print(contexts[0])
         vectors = embeddings.get_embedding(chunks)
-        if collection not in vectors:
+        if collection not in records:
             records[collection] = []
-        records[collection].extend(zip(ids, vectors))
+        records[collection].extend(zip(contexts, vectors, chunks))
 
 # Save the embeddings in a vector database
 print("Saving the data in the database...")

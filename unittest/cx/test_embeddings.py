@@ -1,8 +1,9 @@
 # Embeddings test program
-# Date: 2024/10/05
+# Date: 2024/10/05, 2025/01/26
 # Author: araobp@github.com
 
 import sys
+sys.path.append("../..")
 
 from cx.rag import embeddings 
 import unittest

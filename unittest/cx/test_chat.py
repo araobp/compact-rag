@@ -1,6 +1,9 @@
 # Chat test program
-# Date: 2024/10/04
+# Date: 2024/10/04, 2025/01/26
 # Author: araobp@github.com
+
+import sys
+sys.path.append("../..")
 
 from cx.rag import chat 
 import unittest
