@@ -122,10 +122,10 @@ $ tail /var/log/syslog
 
 ## Partition keys and auxiliary columns supported by sqlite-vec
 
-I use partition keys and auxiliary columns for filtering records on the database in this project.
+I use partition keys and auxiliary columns for filtering records on the database in this project:
 
 ```
-CREATE VIRTUAL TABLE IF NOT EXISTS {collection}
+CREATE VIRTUAL TABLE virtual_showroom
 USING vec0(
 context text partition key,
 embedding float[{dimensions}],
