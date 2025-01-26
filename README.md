@@ -62,6 +62,21 @@ Find "vec0.so" in ./dist directory.
 
 <img src="docs/api_server.jpg" width=700>
 
+## Partition keys and auxiliary columns supported by sqlite-vec
+
+I use partition keys and auxiliary columns for filtering records on the database in this project:
+
+```
+CREATE VIRTUAL TABLE virtual_showroom
+USING vec0(
+context text partition key,
+embedding float[{dimensions}],
++chunk text
+)
+```
+
+Reference: https://alexgarcia.xyz/sqlite-vec/features/vec0.html
+
 ### Unit tests
 
 - [Unit tests for "cx" package](./unittest/cx)
@@ -119,21 +134,6 @@ If something wrong happened, check the syslog:
 ```
 $ tail /var/log/syslog
 ```
-
-## Partition keys and auxiliary columns supported by sqlite-vec
-
-I use partition keys and auxiliary columns for filtering records on the database in this project:
-
-```
-CREATE VIRTUAL TABLE virtual_showroom
-USING vec0(
-context text partition key,
-embedding float[{dimensions}],
-+chunk text
-)
-```
-
-Reference: https://alexgarcia.xyz/sqlite-vec/features/vec0.html
 
 ## Extra: Some experiments with gpt-4o-mini
 
