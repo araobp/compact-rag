@@ -3,7 +3,7 @@
 from os import path
 import sqlite3
 
-__version__ = "0.1.3"
+__version__ = "0.1.6"
 __version_info__ = tuple(__version__.split("."))
 
 def loadable_path():

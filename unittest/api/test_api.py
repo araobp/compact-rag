@@ -2,9 +2,6 @@
 # Date: 2024/10/07
 # Author: araobp@github.com
 
-import sys
-sys.path.append("../../rag")
-
 from urllib import parse
 
 import requests 
@@ -38,7 +35,6 @@ class TestChat(unittest.TestCase):
         r = r.json()
         print(r)
 
-        self.assertEqual(len(r['ids']), k)
         self.assertEqual(len(r['distances']), k)
         self.assertEqual(len(r['chunks']), k)
 

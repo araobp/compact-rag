@@ -1,8 +1,12 @@
 import os
 import sys
+import syslog
 
 from flask import Flask, Blueprint, jsonify, request, make_response, render_template
 import sqlite3
+
+import sys
+sys.path.append("..")
 
 from cx.rag import chat, embeddings, vector_db, tts
 from cx.devices import webcam
@@ -12,8 +16,8 @@ main = Blueprint("main", __name__)
 SAVE_IMAGE = False
 SAVE_AUDIO = False
 
-DB_PATH = "../db/documents.db"
 VECTOR_DB_PATH = "../db/embeddings.db"
+COLLECTION = "virtual_showroom"
 
 # OpenAI's Text-to-Speech
 tts_alloy = tts.TTS(voice="alloy", format="mp3")
@@ -25,31 +29,15 @@ app = Flask(__name__)
 
 def _search(text, context, k):
 
-    collection = vector_db.VectorDB(VECTOR_DB_PATH, context, embeddings.DIMENSION)
+    collection = vector_db.VectorDB(VECTOR_DB_PATH, COLLECTION, embeddings.DIMENSION)
     vector = embeddings.get_embedding(text)
-    result = collection.search(vector, k=k)
+    records = collection.search(vector, context, k=k)
+    chunks = [e[0] for e in records]
+    distances = [e[1] for e in records]
     
-    ids = [e[0] for e in result]
-    ids_str = [str(e[0]) for e in result]
-    ids_str = f"{','.join(ids_str)}"
-    
-    distances = [e[1] for e in result]
-
-    sql = f'SELECT id, chunk FROM chunks WHERE collection="{context}" AND id IN ({ids_str})'
-
-    with sqlite3.connect(DB_PATH) as conn:
-        cur = conn.cursor()
-        records = cur.execute(sql).fetchall()
-
-    records_ = {}
-    for r in records:
-        id_ = r[0]
-        chunk = r[1]
-        records_[id_] = chunk
-
-    chunks = [records_[idx] for idx in ids]
-
-    return {"ids": ids, "distances": distances, "chunks": chunks}
+    result = {"chunks": chunks, "distances": distances}
+    syslog.syslog(f"{text}: {result['chunks'][0]}")
+    return result
 
 
 @main.route("/")
