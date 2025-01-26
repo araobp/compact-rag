@@ -120,9 +120,20 @@ If something wrong happened, check the syslog:
 $ tail /var/log/syslog
 ```
 
-## sqlite-vec metadata filtering
+## Partition keys and auxiliary columns supported by sqlite-vec
 
-- https://alexgarcia.xyz/sqlite-vec/features/vec0.html
+I use partition keys and auxiliary columns for filtering records on the database in this project.
+
+```
+CREATE VIRTUAL TABLE IF NOT EXISTS {collection}
+USING vec0(
+context text partition key,
+embedding float[{dimensions}],
++chunk text
+)
+```
+
+Reference: https://alexgarcia.xyz/sqlite-vec/features/vec0.html
 
 ## Extra: Some experiments with gpt-4o-mini
 
