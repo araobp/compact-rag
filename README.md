@@ -70,7 +70,7 @@ I use partition keys and auxiliary columns for filtering records on the database
 CREATE VIRTUAL TABLE virtual_showroom
 USING vec0(
 context text partition key,
-embedding float[{dimensions}],
+embedding float[1536],
 +chunk text
 )
 ```
